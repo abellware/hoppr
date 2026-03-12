@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cwrpq21b8qjmy"
+path="res://.godot/imported/2026-02-26 rabbit hopper death.wav-9ff552414edbffd3079b0f028335b48b.sample"
+
+[deps]
+
+source_file="res://assets/audio/2026-02-26 rabbit hopper death.wav"
+dest_files=["res://.godot/imported/2026-02-26 rabbit hopper death.wav-9ff552414edbffd3079b0f028335b48b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

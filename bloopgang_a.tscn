@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://2pyi0xamevh1"]
+
+[ext_resource type="Texture2D" uid="uid://c0eaob2g15apb" path="res://assets/Bloop_Gang/bloopgang/1 A level.PNG" id="1_b272y"]
+[ext_resource type="Texture2D" uid="uid://0c0xt80hrqwo" path="res://assets/Bloop_Gang/bloopgang/2 A level.PNG" id="2_fi4uv"]
+[ext_resource type="Texture2D" uid="uid://dv414u2cw1s6l" path="res://assets/Bloop_Gang/bloopgang/3 A level.PNG" id="3_qtd52"]
+[ext_resource type="Texture2D" uid="uid://bmdusixlorwqf" path="res://assets/Bloop_Gang/bloopgang/4 A level.PNG" id="4_c4brr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l03bc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_b272y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fi4uv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qtd52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_c4brr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qtd52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fi4uv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b272y"]
+size = Vector2(1110, 411)
+
+[node name="Bloopgang A" type="Node2D" unique_id=1558175899]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1473957162]
+sprite_frames = SubResource("SpriteFrames_l03bc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1223246964]
+position = Vector2(-213, 336.5)
+shape = SubResource("RectangleShape2D_b272y")

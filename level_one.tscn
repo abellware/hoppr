@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://bb7ctrtb171xm"]
+
+[ext_resource type="Texture2D" uid="uid://b8tv5m0k4opur" path="res://assets/images/Level_One/level one v02.png" id="1_ojold"]
+[ext_resource type="PackedScene" uid="uid://ci5tfgbab5yxg" path="res://player.tscn" id="2_bo08i"]
+[ext_resource type="PackedScene" uid="uid://cwl6e3f6jjt0m" path="res://orange.tscn" id="3_foyw7"]
+[ext_resource type="PackedScene" uid="uid://duq8keek7cgi8" path="res://tree_a.tscn" id="4_xsnk2"]
+[ext_resource type="PackedScene" uid="uid://dwbuydo61f326" path="res://capybara.tscn" id="5_l6eyr"]
+[ext_resource type="PackedScene" uid="uid://dwwhbpa8m33ch" path="res://level_completed.tscn" id="6_l6eyr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bo08i"]
+size = Vector2(7918.5, 244)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_bo08i"]
+a = Vector2(975, 967)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6eyr"]
+size = Vector2(702, 908)
+
+[sub_resource type="GDScript" id="GDScript_l6eyr"]
+resource_name = "FmodEventLevel1music"
+script/source = "extends FmodEventEmitter2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Level_One" type="Node2D" unique_id=145660808]
+
+[node name="background" type="Sprite2D" parent="." unique_id=1064266428]
+z_index = -4096
+texture = ExtResource("1_ojold")
+centered = false
+
+[node name="player" parent="." unique_id=495406967 instance=ExtResource("2_bo08i")]
+position = Vector2(377, 130)
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=352381372]
+position = Vector2(583, 410)
+limit_left = 3
+limit_top = 4
+limit_right = 7690
+limit_bottom = 1194
+limit_smoothed = true
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2012263429]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1531028913]
+position = Vector2(3796.5, 1009)
+shape = SubResource("RectangleShape2D_bo08i")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=771908557]
+position = Vector2(3813, -122)
+shape = SubResource("RectangleShape2D_bo08i")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1994549115]
+shape = SubResource("SegmentShape2D_bo08i")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=2040027229]
+position = Vector2(8024, 444)
+shape = SubResource("RectangleShape2D_l6eyr")
+
+[node name="Orange" parent="." unique_id=1295019906 instance=ExtResource("3_foyw7")]
+z_index = 173
+position = Vector2(2141, 337.00003)
+scale = Vector2(0.325, 0.325)
+
+[node name="tree A" parent="." unique_id=747250851 instance=ExtResource("4_xsnk2")]
+position = Vector2(2011.0001, 343)
+scale = Vector2(0.63, 0.63)
+
+[node name="Capybara" parent="tree A" unique_id=2070910731 instance=ExtResource("5_l6eyr")]
+z_index = 72
+position = Vector2(8555.555, 538.0953)
+scale = Vector2(0.365, 0.365)
+
+[node name="Orange2" parent="." unique_id=1640784936 instance=ExtResource("3_foyw7")]
+position = Vector2(1737, 497)
+scale = Vector2(0.295, 0.295)
+
+[node name="Orange3" parent="." unique_id=670492707 instance=ExtResource("3_foyw7")]
+position = Vector2(2011, 517)
+scale = Vector2(0.295, 0.295)
+
+[node name="Orange4" parent="." unique_id=390116348 instance=ExtResource("3_foyw7")]
+position = Vector2(1875.9999, 364)
+scale = Vector2(0.295, 0.295)
+
+[node name="Orange5" parent="." unique_id=361862660 instance=ExtResource("3_foyw7")]
+position = Vector2(1984, 180)
+scale = Vector2(0.295, 0.295)
+
+[node name="Orange6 capy" parent="." unique_id=2128262089 instance=ExtResource("3_foyw7")]
+position = Vector2(7414.9995, 587)
+scale = Vector2(0.295, 0.295)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1912141322]
+
+[node name="LevelCompleted" parent="CanvasLayer" unique_id=1838376765 instance=ExtResource("6_l6eyr")]
+visible = false
+
+[node name="FmodBankLoader" type="FmodBankLoader" parent="." unique_id=2146971835]
+bank_paths = ["res://FModBank/Desktop/Master.strings.bank", "res://FModBank/Desktop/Level 1.bank"]
+
+[node name="FmodEventEmitter2D" type="FmodEventEmitter2D" parent="." unique_id=1857250871]
+event_name = "event:/Level 1 music"
+event_guid = "{8a1304a2-482c-43a0-a2f4-047d003febb4}"
+autoplay = true
+auto_release = true
+script = SubResource("GDScript_l6eyr")
+
+[node name="FmodListener2D" type="FmodListener2D" parent="." unique_id=1158074764]

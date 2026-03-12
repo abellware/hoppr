@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dwbuydo61f326"]
+
+[ext_resource type="Texture2D" uid="uid://bdre1bsq5vurd" path="res://assets/capybara/2026-03-02 capybara A.png" id="1_ml7vp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ml7vp"]
+size = Vector2(854, 1183)
+
+[node name="Capybara" type="Node2D" unique_id=2070910731]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1969422806]
+texture = ExtResource("1_ml7vp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D" unique_id=1681739742]
+position = Vector2(15, 331.5)
+shape = SubResource("RectangleShape2D_ml7vp")

@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://bd6n65hdp5i6t"]
+
+[ext_resource type="Texture2D" uid="uid://c0eaob2g15apb" path="res://assets/Bloop_Gang/bloopgang/1 A level.PNG" id="1_duimh"]
+[ext_resource type="Texture2D" uid="uid://0c0xt80hrqwo" path="res://assets/Bloop_Gang/bloopgang/2 A level.PNG" id="2_xiqc2"]
+[ext_resource type="Texture2D" uid="uid://dv414u2cw1s6l" path="res://assets/Bloop_Gang/bloopgang/3 A level.PNG" id="3_b2sds"]
+[ext_resource type="Texture2D" uid="uid://bmdusixlorwqf" path="res://assets/Bloop_Gang/bloopgang/4 A level.PNG" id="4_8o5mi"]
+[ext_resource type="Texture2D" uid="uid://du5hpvw46wjdk" path="res://assets/Bloop_Gang/bloopgang/1 B level.PNG" id="5_yvr2f"]
+[ext_resource type="Texture2D" uid="uid://dwu6atyg0twxl" path="res://assets/Bloop_Gang/bloopgang/2 B level.PNG" id="6_6iy8p"]
+[ext_resource type="Texture2D" uid="uid://duw1cutql608y" path="res://assets/Bloop_Gang/bloopgang/3 B level.PNG" id="7_a5oti"]
+[ext_resource type="Texture2D" uid="uid://cqaql4fh7g537" path="res://assets/Bloop_Gang/bloopgang/4 B level.PNG" id="8_oh2ot"]
+[ext_resource type="Texture2D" uid="uid://bpoelh0ohaior" path="res://assets/Bloop_Gang/bloopgang/1 C level.PNG" id="9_hlouy"]
+[ext_resource type="Texture2D" uid="uid://bm6gp46psgyty" path="res://assets/Bloop_Gang/bloopgang/2 C level.PNG" id="10_icsc8"]
+[ext_resource type="Texture2D" uid="uid://batr4hmf237cl" path="res://assets/Bloop_Gang/bloopgang/3 C level.PNG" id="11_raltq"]
+[ext_resource type="Texture2D" uid="uid://5g0jdhsxncmo" path="res://assets/Bloop_Gang/bloopgang/4 C level.PNG" id="12_wq5ff"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pqcet"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_duimh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xiqc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_b2sds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8o5mi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_b2sds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xiqc2")
+}],
+"loop": true,
+"name": &"Bloop_Gang_Walk_A",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_yvr2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6iy8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_a5oti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_oh2ot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_a5oti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6iy8p")
+}],
+"loop": true,
+"name": &"Bloop_Gang_Walk_B",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_hlouy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_icsc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_raltq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wq5ff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_raltq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_icsc8")
+}],
+"loop": true,
+"name": &"Bloop_Gang_Walk_C",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yvr2f"]
+size = Vector2(1103, 428)
+
+[node name="Bloop_Gang" type="CharacterBody2D" unique_id=2109387549]
+
+[node name="Bloop_Gang animation" type="AnimatedSprite2D" parent="." unique_id=1147481365]
+sprite_frames = SubResource("SpriteFrames_pqcet")
+animation = &"Bloop_Gang_Walk_A"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1682303781]
+position = Vector2(-222.5, 334)
+shape = SubResource("RectangleShape2D_yvr2f")

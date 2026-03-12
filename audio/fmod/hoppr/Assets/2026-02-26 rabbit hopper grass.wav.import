@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dob1h3xlfd0pr"
+path="res://.godot/imported/2026-02-26 rabbit hopper grass.wav-c142e0d05e50aea4eec8d9584f81adef.sample"
+
+[deps]
+
+source_file="res://audio/fmod/hoppr/Assets/2026-02-26 rabbit hopper grass.wav"
+dest_files=["res://.godot/imported/2026-02-26 rabbit hopper grass.wav-c142e0d05e50aea4eec8d9584f81adef.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

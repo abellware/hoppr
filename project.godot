@@ -1,0 +1,58 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[Fmod]
+
+General/banks_path="res://FModBank/Desktop"
+General/should_load_by_name=true
+
+[application]
+
+config/name="hoppr"
+run/main_scene="uid://bb7ctrtb171xm"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+boot_splash/image="uid://dh5iabrgb7g1y"
+config/icon="res://icon.svg"
+boot_splash/minimum_display_time=1000
+
+[audio]
+
+driver/mix_rate=48000
+
+[autoload]
+
+FmodManager="*uid://cds10pm7hwn3p"
+Events="*uid://c6ffikiflw82x"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/fmod/plugin.cfg")
+
+[layer_names]
+
+2d_physics/layer_1="World"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Hazard"
+2d_physics/layer_4="Coin"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

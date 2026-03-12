@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bto3x4vetrgnt"]
+
+[ext_resource type="Texture2D" uid="uid://b8tv5m0k4opur" path="res://assets/images/Level_One/level one v02.png" id="1_3hls8"]
+[ext_resource type="PackedScene" uid="uid://c8dp4bos8bjg" path="res://player.tscn" id="2_hbghi"]
+
+[node name="Level 1" type="Node2D" unique_id=1953623817]
+
+[node name="background image" type="Sprite2D" parent="." unique_id=1703637672]
+z_index = -4096
+position = Vector2(3841, 542)
+texture = ExtResource("1_3hls8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=27522426]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=515501187]
+polygon = PackedVector2Array(7, -2, 827, 845, 1055, 894, 1304, 872, 1527, 894, 1831, 904, 1983, 910, 1994, 904, 1983, 888, 1988, 921, 2325, 937, 2493, 959, 2813, 899, 3188, 991, 3508, 937, 3741, 812, 4012, 807, 4202, 747, 4392, 812, 4626, 839, 4794, 785, 5212, 812, 5592, 845, 5765, 953, 6009, 894, 6248, 866, 6476, 942, 6672, 877, 6872, 975, 7073, 970, 7502, 910, 7800, 839, 7920, 1425, -329, 1442)
+
+[node name="Player" parent="." unique_id=587438939 instance=ExtResource("2_hbghi")]
+z_index = 4096
+position = Vector2(768, 584)
+floor_max_angle = 1.446878

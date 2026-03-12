@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://scvxa0pt5doy"
+path="res://.godot/imported/2026-02-26 rabbit hopper squish.wav-7ba483adc1f531ab8ed12289d715ee65.sample"
+
+[deps]
+
+source_file="res://assets/audio/2026-02-26 rabbit hopper squish.wav"
+dest_files=["res://.godot/imported/2026-02-26 rabbit hopper squish.wav-7ba483adc1f531ab8ed12289d715ee65.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

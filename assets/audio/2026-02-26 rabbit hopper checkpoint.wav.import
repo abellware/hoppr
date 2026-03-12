@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bdy3v3vksbgsu"
+path="res://.godot/imported/2026-02-26 rabbit hopper checkpoint.wav-8569b5eef5273ef90b498af3927df5bc.sample"
+
+[deps]
+
+source_file="res://assets/audio/2026-02-26 rabbit hopper checkpoint.wav"
+dest_files=["res://.godot/imported/2026-02-26 rabbit hopper checkpoint.wav-8569b5eef5273ef90b498af3927df5bc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
