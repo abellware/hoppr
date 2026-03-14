@@ -1,14 +1,20 @@
 extends Area2D
 
+@export var coingrab : AudioStream
+@onready var audio = $AudioStreamPlayer
+@onready var coin: AudioStreamPlayer = $"../coin"
 
 
-
-func _on_body_entered(body):
+func _on_body_entered(_body):
+	coin.play()
 	queue_free()
 	var Oranges = get_tree().get_nodes_in_group("Oranges")
 	print(Oranges.size())
+	
 	if Oranges.size() == 1:
 		Events.level_completed.emit()
+		
+		
 	
 	
 	
