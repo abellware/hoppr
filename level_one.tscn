@@ -3,11 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://b8tv5m0k4opur" path="res://assets/images/Level_One/level one v02.png" id="1_ojold"]
 [ext_resource type="AudioStream" uid="uid://4j7ladbonk5n" path="res://assets/audio/2026-02-26 rabbit hopper crickets.wav" id="2_0l1we"]
 [ext_resource type="PackedScene" uid="uid://ci5tfgbab5yxg" path="res://player.tscn" id="2_bo08i"]
+[ext_resource type="Texture2D" uid="uid://bf55ntilwyuep" path="res://assets/images/level one v02grasstop.png" id="2_xq862"]
 [ext_resource type="AudioStream" uid="uid://cswk7gsbxg8gk" path="res://assets/audio/2026-02-26 rabbit hopper coin.wav" id="3_466b2"]
+[ext_resource type="Texture2D" uid="uid://i0f0c4qnas2m" path="res://assets/images/level one v02matte.png" id="3_evv1w"]
 [ext_resource type="PackedScene" uid="uid://cwl6e3f6jjt0m" path="res://orange.tscn" id="3_foyw7"]
+[ext_resource type="Script" uid="uid://bh5v6v1ank33h" path="res://collision_polygon_2d_floor_a.gd" id="4_evv1w"]
 [ext_resource type="PackedScene" uid="uid://duq8keek7cgi8" path="res://tree_a.tscn" id="4_xsnk2"]
 [ext_resource type="PackedScene" uid="uid://dwbuydo61f326" path="res://capybara.tscn" id="5_l6eyr"]
 [ext_resource type="PackedScene" uid="uid://dwwhbpa8m33ch" path="res://level_completed.tscn" id="6_l6eyr"]
+[ext_resource type="AudioStream" uid="uid://scvxa0pt5doy" path="res://assets/audio/2026-02-26 rabbit hopper squish.wav" id="11_6t2mo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bo08i"]
 size = Vector2(7918.5, 244)
@@ -18,16 +22,25 @@ a = Vector2(975, 967)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6eyr"]
 size = Vector2(702, 908)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_6t2mo"]
+radius = 166.41214
+
 [node name="Level_One" type="Node2D" unique_id=145660808]
 
 [node name="background" type="Sprite2D" parent="." unique_id=1064266428]
 z_index = -4096
+position = Vector2(1, -1)
 texture = ExtResource("1_ojold")
 centered = false
 
+[node name="Sprite2D top grass" type="Sprite2D" parent="." unique_id=109301482]
+z_index = 4096
+position = Vector2(3843, 539)
+texture = ExtResource("2_xq862")
+
 [node name="player" parent="." unique_id=495406967 instance=ExtResource("2_bo08i")]
 top_level = true
-z_index = 4096
+z_index = 4000
 position = Vector2(377, 130)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=352381372]
@@ -44,19 +57,38 @@ drag_horizontal_enabled = true
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1531028913]
-position = Vector2(3796.5, 1009)
+position = Vector2(3797, 1456)
 shape = SubResource("RectangleShape2D_bo08i")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=771908557]
+[node name="CollisionShape2D3 top brake" type="CollisionShape2D" parent="StaticBody2D" unique_id=771908557]
 position = Vector2(3813, -122)
 shape = SubResource("RectangleShape2D_bo08i")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1994549115]
+visible = false
 shape = SubResource("SegmentShape2D_bo08i")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=2040027229]
+[node name="CollisionShape2D4 right" type="CollisionShape2D" parent="StaticBody2D" unique_id=2040027229]
 position = Vector2(8024, 444)
 shape = SubResource("RectangleShape2D_l6eyr")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1749684720]
+position = Vector2(663, 907)
+shape = SubResource("CircleShape2D_6t2mo")
+
+[node name="CollisionShape2D5 alpha" type="Sprite2D" parent="StaticBody2D" unique_id=424541004]
+visible = false
+position = Vector2(3844, 540)
+texture = ExtResource("3_evv1w")
+
+[node name="CollisionPolygon2D_floor_A" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=2051074704]
+polygon = PackedVector2Array(25, 21, 2, 506, 124, 478, 217, 425, 245, 358, 272, 310, 302, 318, 386, 428, 434, 489, 593, 603, 696, 716, 728, 792, 799, 889, 903, 951, 1033, 950, 1213, 908, 1404, 917, 1653, 944, 2060, 929, 2111, 942, 2157, 988, 2248, 995, 2298, 948, 2317, 906, 2357, 913, 2419, 980, 2509, 974, 2705, 870, 2845, 847, 2864, 934, 2948, 957, 3060, 894, 3150, 887, 3260, 951, 3338, 955, 3464, 887, 3595, 818, 3954, 826, 4048, 778, 4017, 1282, -230, 1254, -139, 40, -8, 10)
+script = ExtResource("4_evv1w")
+
+[node name="CollisionPolygon2D2_floor_B" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=104767899]
+position = Vector2(6197.9995, 1090)
+scale = Vector2(159.39769, 13.540504)
+polygon = PackedVector2Array(-6.6374855, -22.598866, -6.9386177, -21.491077, -7.2522984, -21.86034, -8.488201, -19.497059, -8.97127, -20.900257, -9.259855, -23.558949, -9.73665, -18.610828, -10.232265, -19.497059, -10.520853, -24.29747, -10.991373, -19.053944, -11.756756, -18.758533, -12.308834, -25.405258, -13.174593, -25.109848, -13.714123, -20.900257, -13.739218, 6.7205734, 9.906044, 6.129753, 9.598637, -34.046, 8.695236, -31.535015, 7.5032463, -20.752552, 6.41164, -15.3613205, 3.946106, -14.548943, 2.9611511, -14.4012375, 2.459259, -11.668694, 1.7252464, -8.566895, 1.1355286, -10.708611, 0.67755127, -15.3613205, -0.075279236, -18.610828, -0.83438873, -19.201649, -1.1606178, -18.093864, -1.6875992, -13.219597, -2.1706696, -11.816399, -2.5157166, -14.253532, -2.998787, -12.998039, -3.419117, -14.105827, -3.8018074, -12.850334, -4.6550217, -17.94616, -4.9937973, -23.263538, -5.4956856, -22.303455, -6.003849, -21.86034)
 
 [node name="Orange" parent="." unique_id=1295019906 instance=ExtResource("3_foyw7")]
 z_index = 173
@@ -106,3 +138,7 @@ bus = &"MusicBuss"
 z_index = 72
 position = Vector2(7400.9995, 682)
 scale = Vector2(0.22995001, 0.22995001)
+
+[node name="AudioStreamPlayer_squish" type="AudioStreamPlayer" parent="." unique_id=2043633009]
+stream = ExtResource("11_6t2mo")
+bus = &"SoundFXBuss"

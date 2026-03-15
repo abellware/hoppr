@@ -41,6 +41,9 @@
 [ext_resource type="Texture2D" uid="uid://do1h5fqhqsesn" path="res://assets/images/Player/PlayerClimb/PlayerClimb_10.png" id="19_ygbnx"]
 [ext_resource type="Texture2D" uid="uid://d3l0r06pisn0" path="res://assets/images/Player/PlayerClimb/PlayerClimb_11.png" id="20_v2t6f"]
 [ext_resource type="Texture2D" uid="uid://dvakgu7b612kx" path="res://assets/images/Player/PlayerClimb/PlayerClimb_12.png" id="21_l3lcn"]
+[ext_resource type="AudioStream" uid="uid://53drbjq0m5r3" path="res://assets/audio/2026-02-26 rabbit hopper grass.wav" id="42_3iwfv"]
+[ext_resource type="AudioStream" uid="uid://b24dcn626e1ah" path="res://assets/audio/2026-02-26 rabbit hopper jump.wav" id="43_qwsg1"]
+[ext_resource type="AudioStream" uid="uid://scvxa0pt5doy" path="res://assets/audio/2026-02-26 rabbit hopper squish.wav" id="44_qwsg1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b88wv"]
 animations = [{
@@ -209,6 +212,12 @@ size = Vector2(134, 178)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ny14h"]
 size = Vector2(137, 180)
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1xqrm"]
+playback_mode = 1
+random_pitch = 1.2270976
+streams_count = 1
+stream_0/stream = ExtResource("42_3iwfv")
+
 [node name="Player" type="CharacterBody2D" unique_id=495406967]
 collision_layer = 2
 floor_stop_on_slope = false
@@ -232,5 +241,20 @@ collision_mask = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CoinDetector" unique_id=1769778004]
 position = Vector2(-0.5, -2)
 shape = SubResource("RectangleShape2D_ny14h")
+
+[node name="AudioStreamPlayer_steps" type="AudioStreamPlayer" parent="." unique_id=979154715]
+stream = SubResource("AudioStreamRandomizer_1xqrm")
+bus = &"SoundFXBuss"
+
+[node name="AudioStreamPlayer_jump" type="AudioStreamPlayer" parent="." unique_id=1403319616]
+stream = ExtResource("43_qwsg1")
+volume_db = -9.237
+pitch_scale = 0.67
+bus = &"SoundFXBuss"
+
+[node name="AudioStreamPlayer_squish" type="AudioStreamPlayer" parent="." unique_id=213062899]
+stream = ExtResource("44_qwsg1")
+pitch_scale = 0.87
+bus = &"SoundFXBuss"
 
 [connection signal="area_entered" from="CoinDetector" to="." method="_on_coin_detector_area_entered"]
