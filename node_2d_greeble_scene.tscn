@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://bmxb0fl1pdj41"]
+
+[ext_resource type="Texture2D" uid="uid://c0eaob2g15apb" path="res://assets/images/Bloop_Gang/bloopgang/1 A level.PNG" id="1_8brfh"]
+[ext_resource type="Script" uid="uid://cym815s4jr65r" path="res://node_2d_greeble_scene.gd" id="1_d23n0"]
+[ext_resource type="Texture2D" uid="uid://0c0xt80hrqwo" path="res://assets/images/Bloop_Gang/bloopgang/2 A level.PNG" id="2_d23n0"]
+[ext_resource type="Texture2D" uid="uid://dv414u2cw1s6l" path="res://assets/images/Bloop_Gang/bloopgang/3 A level.PNG" id="3_tu12e"]
+[ext_resource type="Texture2D" uid="uid://bmdusixlorwqf" path="res://assets/images/Bloop_Gang/bloopgang/4 A level.PNG" id="4_m2t6y"]
+[ext_resource type="Texture2D" uid="uid://du5hpvw46wjdk" path="res://assets/images/Bloop_Gang/bloopgang/1 B level.PNG" id="5_rjd1o"]
+[ext_resource type="Texture2D" uid="uid://dwu6atyg0twxl" path="res://assets/images/Bloop_Gang/bloopgang/2 B level.PNG" id="6_f5il7"]
+[ext_resource type="Texture2D" uid="uid://duw1cutql608y" path="res://assets/images/Bloop_Gang/bloopgang/3 B level.PNG" id="7_pk5b8"]
+[ext_resource type="Texture2D" uid="uid://cqaql4fh7g537" path="res://assets/images/Bloop_Gang/bloopgang/4 B level.PNG" id="8_wcmqc"]
+[ext_resource type="Texture2D" uid="uid://bpoelh0ohaior" path="res://assets/images/Bloop_Gang/bloopgang/1 C level.PNG" id="9_874ag"]
+[ext_resource type="Texture2D" uid="uid://bm6gp46psgyty" path="res://assets/images/Bloop_Gang/bloopgang/2 C level.PNG" id="10_rbggk"]
+[ext_resource type="Texture2D" uid="uid://batr4hmf237cl" path="res://assets/images/Bloop_Gang/bloopgang/3 C level.PNG" id="11_xu6w8"]
+[ext_resource type="Texture2D" uid="uid://5g0jdhsxncmo" path="res://assets/images/Bloop_Gang/bloopgang/4 C level.PNG" id="12_iiprf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bdr8c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8brfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_d23n0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tu12e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_m2t6y")
+}],
+"loop": true,
+"name": &"normy",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6qi3i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_rjd1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f5il7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pk5b8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wcmqc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x5w5f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_874ag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rbggk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xu6w8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_iiprf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8brfh"]
+radius = 121.00006
+height = 1237.8234
+
+[node name="bloopgang" type="CharacterBody2D" unique_id=446351947]
+floor_stop_on_slope = false
+floor_constant_speed = true
+floor_max_angle = 1.2531464
+script = ExtResource("1_d23n0")
+
+[node name="AnimatedSprite2D A level" type="AnimatedSprite2D" parent="." unique_id=1012122425]
+z_index = 1001
+position = Vector2(962, 542)
+sprite_frames = SubResource("SpriteFrames_bdr8c")
+animation = &"normy"
+autoplay = "normy"
+frame_progress = 0.9186196
+
+[node name="AnimatedSprite2D B level" type="AnimatedSprite2D" parent="." unique_id=340222369]
+z_index = 984
+position = Vector2(960, 544)
+sprite_frames = SubResource("SpriteFrames_6qi3i")
+autoplay = "default"
+frame_progress = 0.045354966
+
+[node name="AnimatedSprite2D C level" type="AnimatedSprite2D" parent="." unique_id=272723812]
+z_index = 1000
+position = Vector2(960, 542)
+sprite_frames = SubResource("SpriteFrames_x5w5f")
+autoplay = "default"
+frame_progress = 0.409665
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2115982866]
+position = Vector2(790, 922)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_8brfh")
