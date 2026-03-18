@@ -14,6 +14,15 @@
 [ext_resource type="AudioStream" uid="uid://scvxa0pt5doy" path="res://assets/audio/2026-02-26 rabbit hopper squish.wav" id="11_6t2mo"]
 [ext_resource type="PackedScene" uid="uid://bd6n65hdp5i6t" path="res://bloop_gang.tscn" id="13_rnwmu"]
 [ext_resource type="Script" uid="uid://cixlr5yfxgsf6" path="res://bloop_gang.gd" id="14_xdopl"]
+[ext_resource type="PackedScene" uid="uid://c1s26p82pf43q" path="res://bloop_a_2.tscn" id="15_c6i7l"]
+[ext_resource type="Texture2D" uid="uid://dbg78q6u6kr2v" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/1 6 A level.PNG" id="19_jecxw"]
+[ext_resource type="Texture2D" uid="uid://bniqd6b4rupkq" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/2 6 A level.PNG" id="20_4rbyc"]
+[ext_resource type="Texture2D" uid="uid://ba2xxqbqv73bp" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/3 6 A level.PNG" id="21_bhjt1"]
+[ext_resource type="Texture2D" uid="uid://c3r1ulochykfk" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/4 6 A level.PNG" id="22_52squ"]
+[ext_resource type="Texture2D" uid="uid://cfmv0v4n43dg5" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/1 2 A level.PNG" id="23_yn46s"]
+[ext_resource type="Texture2D" uid="uid://irxucbhwlnmk" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/2 2 A level.PNG" id="24_2uqe7"]
+[ext_resource type="Texture2D" uid="uid://bx7rbd8dsoxuv" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/3 2 A level.PNG" id="25_010df"]
+[ext_resource type="Texture2D" uid="uid://be73w43w3hduq" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/4 2 A level.PNG" id="26_wi2n4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bo08i"]
 size = Vector2(7918.5, 244)
@@ -26,6 +35,46 @@ size = Vector2(702, 908)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6t2mo"]
 radius = 166.41214
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k2grx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_jecxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_4rbyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_bhjt1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_52squ")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a5fxg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_yn46s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_2uqe7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_010df")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_wi2n4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Level_One" type="Node2D" unique_id=145660808]
 
@@ -145,10 +194,29 @@ scale = Vector2(0.22995001, 0.22995001)
 stream = ExtResource("11_6t2mo")
 bus = &"SoundFXBuss"
 
-[node name="Bloop_Gang" parent="." unique_id=2109387549 instance=ExtResource("13_rnwmu")]
+[node name="Bloop_Gang A1" parent="." unique_id=23922675 instance=ExtResource("13_rnwmu")]
 z_index = 1000
 position = Vector2(7099, 637)
 scale = Vector2(0.5, 0.5)
-floor_constant_speed = true
 floor_max_angle = 1.8936822
 script = ExtResource("14_xdopl")
+
+[node name="Bloop A2" parent="." unique_id=50128549 instance=ExtResource("15_c6i7l")]
+z_index = 1000
+position = Vector2(7099, 637)
+scale = Vector2(0.5, 0.5)
+floor_max_angle = 1.3369222
+
+[node name="Bloop A3" parent="." unique_id=780976596 instance=ExtResource("15_c6i7l")]
+z_index = 1000
+position = Vector2(7099, 637)
+
+[node name="A6" type="AnimatedSprite2D" parent="." unique_id=606216215]
+visible = false
+sprite_frames = SubResource("SpriteFrames_k2grx")
+autoplay = "default"
+
+[node name="A4" type="AnimatedSprite2D" parent="." unique_id=1994714085]
+visible = false
+sprite_frames = SubResource("SpriteFrames_a5fxg")
+autoplay = "default"

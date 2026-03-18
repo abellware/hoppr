@@ -44,6 +44,13 @@
 [ext_resource type="AudioStream" uid="uid://53drbjq0m5r3" path="res://assets/audio/2026-02-26 rabbit hopper grass.wav" id="42_3iwfv"]
 [ext_resource type="AudioStream" uid="uid://b24dcn626e1ah" path="res://assets/audio/2026-02-26 rabbit hopper jump.wav" id="43_qwsg1"]
 [ext_resource type="AudioStream" uid="uid://scvxa0pt5doy" path="res://assets/audio/2026-02-26 rabbit hopper squish.wav" id="44_qwsg1"]
+[ext_resource type="AudioStream" uid="uid://sgy4b5oeljof" path="res://assets/audio/2026-03-16 foley 001.wav" id="45_oybyf"]
+[ext_resource type="AudioStream" uid="uid://cmitopaqg1fmr" path="res://assets/audio/2026-03-16 foley 002.wav" id="46_ajfva"]
+[ext_resource type="AudioStream" uid="uid://dydiskdq1lycf" path="res://assets/audio/2026-03-16 foley 003.wav" id="47_5ef02"]
+[ext_resource type="AudioStream" uid="uid://dr6uiwtx7ip3m" path="res://assets/audio/2026-03-16 foley 004.wav" id="48_pfmca"]
+[ext_resource type="AudioStream" uid="uid://7d3km8lvoxh" path="res://assets/audio/2026-03-16 foley 005.wav" id="49_76oay"]
+[ext_resource type="AudioStream" uid="uid://doehrdfhhwy4f" path="res://assets/audio/2026-03-16 foley 006.wav" id="50_b4uyv"]
+[ext_resource type="AudioStream" uid="uid://dj5fo1oxmkl84" path="res://assets/audio/2026-03-16 foley 007.wav" id="51_tw8ou"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b88wv"]
 animations = [{
@@ -212,11 +219,15 @@ size = Vector2(134, 178)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ny14h"]
 size = Vector2(137, 180)
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1xqrm"]
-playback_mode = 1
-random_pitch = 1.2270976
-streams_count = 1
-stream_0/stream = ExtResource("42_3iwfv")
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ygbnx"]
+streams_count = 7
+stream_0/stream = ExtResource("45_oybyf")
+stream_1/stream = ExtResource("46_ajfva")
+stream_2/stream = ExtResource("47_5ef02")
+stream_3/stream = ExtResource("48_pfmca")
+stream_4/stream = ExtResource("49_76oay")
+stream_5/stream = ExtResource("50_b4uyv")
+stream_6/stream = ExtResource("51_tw8ou")
 
 [node name="Player" type="CharacterBody2D" unique_id=495406967]
 collision_layer = 2
@@ -243,7 +254,8 @@ position = Vector2(-0.5, -2)
 shape = SubResource("RectangleShape2D_ny14h")
 
 [node name="AudioStreamPlayer_steps" type="AudioStreamPlayer" parent="." unique_id=979154715]
-stream = SubResource("AudioStreamRandomizer_1xqrm")
+stream = ExtResource("42_3iwfv")
+pitch_scale = 0.97
 bus = &"SoundFXBuss"
 
 [node name="AudioStreamPlayer_jump" type="AudioStreamPlayer" parent="." unique_id=1403319616]
@@ -255,6 +267,10 @@ bus = &"SoundFXBuss"
 [node name="AudioStreamPlayer_squish" type="AudioStreamPlayer" parent="." unique_id=213062899]
 stream = ExtResource("44_qwsg1")
 pitch_scale = 0.87
+bus = &"SoundFXBuss"
+
+[node name="AudioStreamPlayer_foley" type="AudioStreamPlayer" parent="." unique_id=639705754]
+stream = SubResource("AudioStreamRandomizer_ygbnx")
 bus = &"SoundFXBuss"
 
 [connection signal="area_entered" from="CoinDetector" to="." method="_on_coin_detector_area_entered"]

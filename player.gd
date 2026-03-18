@@ -10,6 +10,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
 @onready var audio_stream_player_steps: AudioStreamPlayer = $"AudioStreamPlayer_steps"
+@onready var audio_stream_player_foley: AudioStreamPlayer = $AudioStreamPlayer_foley
+
 @onready var audio_stream_player_jump: AudioStreamPlayer = $AudioStreamPlayer_jump
 @onready var audio_stream_player_squish: AudioStreamPlayer = $AudioStreamPlayer_squish
 
@@ -49,8 +51,15 @@ func handle_acceleration(input_axis, delta):
 	if input_axis != 0:
 		velocity.x = move_toward(velocity.x, SPEED * input_axis, ACCELERATION * delta)
 		if is_on_floor():
-			if !audio_stream_player_steps.playing:
-				audio_stream_player_steps.play()
+			if !audio_stream_player_foley.playing:
+				audio_stream_player_foley.play()
+			#if !audio_stream_player_steps.playing:
+				#audio_stream_player_steps.play()
+				
+				
+				
+	#else: input_axis == 0
+	#audio_stream_player_steps.stop()
 
 func apply_friction(input_axis, delta):
 	if input_axis == 0:
