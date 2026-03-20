@@ -2,9 +2,9 @@ extends CharacterBody2D
 @onready var bloop_gang: CharacterBody2D = get_parent().get_node("player")
 @onready var player: CharacterBody2D = $"../player"
 @onready var animated_sprite_2d = $AnimatedSprite2D
-@onready var animated_sprite_2d_a_level: AnimatedSprite2D = $"AnimatedSprite2D A level"
-@onready var animated_sprite_2d_b_level: AnimatedSprite2D = $"AnimatedSprite2D B level"
-@onready var animated_sprite_2d_c_level: AnimatedSprite2D = $"AnimatedSprite2D C level"
+#@onready var animated_sprite_2d_a_level: AnimatedSprite2D = $"AnimatedSprite2D A level"
+#@onready var animated_sprite_2d_b_level: AnimatedSprite2D = $"AnimatedSprite2D B level"
+#@onready var animated_sprite_2d_c_level: AnimatedSprite2D = $"AnimatedSprite2D C level"
 
 
 #@onready var animated_sprite_2d = $AnimatedSprite2D

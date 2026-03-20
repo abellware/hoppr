@@ -1,5 +1,15 @@
 [gd_scene format=3 uid="uid://dwwhbpa8m33ch"]
 
+[sub_resource type="SystemFont" id="SystemFont_2sdve"]
+font_names = PackedStringArray("Bookman Old Style")
+
+[sub_resource type="LabelSettings" id="LabelSettings_kb4ov"]
+font = SubResource("SystemFont_2sdve")
+font_size = 126
+outline_size = 8
+outline_color = Color(1, 0.4392157, 0.25490198, 1)
+shadow_color = Color(0, 0, 0, 0.9882353)
+
 [node name="LevelCompleted" type="ColorRect" unique_id=1838376765]
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,3 +29,4 @@ grow_vertical = 2
 [node name="Label" type="Label" parent="CenterContainer" unique_id=662394924]
 layout_mode = 2
 text = "Capybara head orange"
+label_settings = SubResource("LabelSettings_kb4ov")

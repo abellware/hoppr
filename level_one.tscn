@@ -15,14 +15,18 @@
 [ext_resource type="PackedScene" uid="uid://bd6n65hdp5i6t" path="res://bloop_gang.tscn" id="13_rnwmu"]
 [ext_resource type="Script" uid="uid://cixlr5yfxgsf6" path="res://bloop_gang.gd" id="14_xdopl"]
 [ext_resource type="PackedScene" uid="uid://c1s26p82pf43q" path="res://bloop_a_2.tscn" id="15_c6i7l"]
-[ext_resource type="Texture2D" uid="uid://dbg78q6u6kr2v" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/1 6 A level.PNG" id="19_jecxw"]
-[ext_resource type="Texture2D" uid="uid://bniqd6b4rupkq" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/2 6 A level.PNG" id="20_4rbyc"]
-[ext_resource type="Texture2D" uid="uid://ba2xxqbqv73bp" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/3 6 A level.PNG" id="21_bhjt1"]
-[ext_resource type="Texture2D" uid="uid://c3r1ulochykfk" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/4 6 A level.PNG" id="22_52squ"]
-[ext_resource type="Texture2D" uid="uid://cfmv0v4n43dg5" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/1 2 A level.PNG" id="23_yn46s"]
-[ext_resource type="Texture2D" uid="uid://irxucbhwlnmk" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/2 2 A level.PNG" id="24_2uqe7"]
-[ext_resource type="Texture2D" uid="uid://bx7rbd8dsoxuv" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/3 2 A level.PNG" id="25_010df"]
-[ext_resource type="Texture2D" uid="uid://be73w43w3hduq" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/4 2 A level.PNG" id="26_wi2n4"]
+[ext_resource type="PackedScene" uid="uid://1vo5om2bqwp8" path="res://bloop_a_4.tscn" id="16_37gll"]
+[ext_resource type="PackedScene" uid="uid://e1r20d2h5ah7" path="res://bloop_a_3real.tscn" id="16_uyji0"]
+[ext_resource type="Script" uid="uid://d3imavalv2ro2" path="res://bloop_a_3_real.gd" id="17_i8j42"]
+[ext_resource type="PackedScene" uid="uid://clqekgwinqmy4" path="res://bloop_b_1.tscn" id="19_hiwaj"]
+[ext_resource type="Script" uid="uid://dveahnx7wkmds" path="res://bloop_b_1.gd" id="20_0xm52"]
+[ext_resource type="PackedScene" uid="uid://b0k64sningvng" path="res://bloop_b_2.tscn" id="21_0xm52"]
+[ext_resource type="PackedScene" uid="uid://ci8ts8nsjykdx" path="res://bloop_b_3.tscn" id="22_c6i7l"]
+[ext_resource type="Script" uid="uid://cmhbngis00ebn" path="res://bloop_b_3.gd" id="23_o24hg"]
+[ext_resource type="PackedScene" uid="uid://5qagy6hn0q2w" path="res://bloop_b_4.tscn" id="24_x6qqq"]
+[ext_resource type="Script" uid="uid://b0mhh70r00beh" path="res://bloop_b_4.gd" id="25_lro86"]
+[ext_resource type="PackedScene" uid="uid://doynpf0faaowm" path="res://bloop_b_5.tscn" id="26_3e6mj"]
+[ext_resource type="Script" uid="uid://b0vjx2t1i8acs" path="res://bloop_b_5.gd" id="27_8wk56"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bo08i"]
 size = Vector2(7918.5, 244)
@@ -35,46 +39,6 @@ size = Vector2(702, 908)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6t2mo"]
 radius = 166.41214
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_k2grx"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("19_jecxw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_4rbyc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_bhjt1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_52squ")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_a5fxg"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("23_yn46s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_2uqe7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_010df")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_wi2n4")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [node name="Level_One" type="Node2D" unique_id=145660808]
 
@@ -133,13 +97,13 @@ position = Vector2(3844, 540)
 texture = ExtResource("3_evv1w")
 
 [node name="CollisionPolygon2D_floor_A" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=2051074704]
-polygon = PackedVector2Array(25, 21, 2, 506, 124, 478, 217, 425, 245, 358, 272, 310, 302, 318, 386, 428, 434, 489, 593, 603, 696, 716, 728, 792, 799, 889, 903, 951, 1033, 950, 1213, 908, 1404, 917, 1653, 944, 2060, 929, 2111, 942, 2157, 988, 2248, 995, 2298, 948, 2317, 906, 2357, 913, 2419, 980, 2509, 974, 2705, 870, 2845, 847, 2864, 934, 2948, 957, 3060, 894, 3150, 887, 3260, 951, 3338, 955, 3464, 887, 3595, 818, 3954, 826, 4048, 778, 4017, 1282, -230, 1254, -139, 40, -8, 10)
+polygon = PackedVector2Array(25, 21, 2, 506, 124, 478, 217, 425, 245, 358, 272, 310, 302, 318, 386, 428, 434, 489, 593, 603, 696, 716, 728, 792, 799, 889, 903, 951, 1033, 950, 1213, 908, 1404, 917, 1653, 944, 2060, 929, 2111, 942, 2157, 988, 2248, 995, 2298, 948, 2317, 906, 2357, 913, 2419, 980, 2509, 974, 2648, 974, 2795, 967, 2948, 957, 3060, 894, 3157, 956, 3260, 951, 3338, 955, 3444, 972, 3578, 1002, 3877, 960, 4054, 995, 4017, 1282, -230, 1254, -139, 40, -8, 10)
 script = ExtResource("4_evv1w")
 
 [node name="CollisionPolygon2D2_floor_B" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=104767899]
 position = Vector2(6197.9995, 1090)
 scale = Vector2(159.39769, 13.540504)
-polygon = PackedVector2Array(-6.6374855, -22.598866, -6.9386177, -21.491077, -7.2522984, -21.86034, -8.488201, -19.497059, -8.97127, -20.900257, -9.259855, -23.558949, -9.73665, -18.610828, -10.232265, -19.497059, -10.520853, -24.29747, -10.991373, -19.053944, -11.756756, -18.758533, -12.308834, -25.405258, -13.174593, -25.109848, -13.714123, -20.900257, -13.739218, 6.7205734, 9.906044, 6.129753, 9.598637, -34.046, 8.695236, -31.535015, 7.5032463, -20.752552, 6.41164, -15.3613205, 3.946106, -14.548943, 2.9611511, -14.4012375, 2.459259, -11.668694, 1.7252464, -8.566895, 1.1355286, -10.708611, 0.67755127, -15.3613205, -0.075279236, -18.610828, -0.83438873, -19.201649, -1.1606178, -18.093864, -1.6875992, -13.219597, -2.1706696, -11.816399, -2.5157166, -14.253532, -2.998787, -12.998039, -3.419117, -14.105827, -3.8018074, -12.850334, -4.6550217, -17.94616, -4.9937973, -23.263538, -5.4956856, -22.303455, -6.003849, -21.86034)
+polygon = PackedVector2Array(-6.750408, -15.213615, -7.170742, -14.327385, -8.488201, -19.497059, -9.322592, -11.816399, -10.997648, -12.259514, -11.756756, -18.758533, -12.308834, -16.173698, -13.293791, -8.197632, -13.739218, 6.7205734, 9.906044, 6.129753, 9.598637, -34.046, 8.695236, -31.535015, 7.5032463, -20.752552, 6.2422523, -5.1696777, 4.096676, -9.083862, 2.954876, -8.049927, 2.2898712, -7.015991, 1.7252464, -8.566895, 1.1041603, -8.7146, -0.5583496, -12.111809, -1.6875992, -13.219597, -2.1706696, -11.816399, -2.998787, -12.998039, -3.8018074, -12.850334, -4.6989365, -14.47509)
 
 [node name="Orange" parent="." unique_id=1295019906 instance=ExtResource("3_foyw7")]
 z_index = 173
@@ -167,7 +131,7 @@ position = Vector2(1984, 180)
 scale = Vector2(0.295, 0.295)
 
 [node name="Orange6 capy" parent="." unique_id=2128262089 instance=ExtResource("3_foyw7")]
-position = Vector2(7414.9995, 587)
+position = Vector2(7415, 548.875)
 scale = Vector2(0.295, 0.295)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1912141322]
@@ -188,7 +152,7 @@ bus = &"MusicBuss"
 [node name="Capybara" parent="." unique_id=2070910731 instance=ExtResource("5_l6eyr")]
 z_index = 72
 position = Vector2(7400.9995, 682)
-scale = Vector2(0.22995001, 0.22995001)
+scale = Vector2(0.445, 0.445)
 
 [node name="AudioStreamPlayer_squish" type="AudioStreamPlayer" parent="." unique_id=2043633009]
 stream = ExtResource("11_6t2mo")
@@ -205,18 +169,50 @@ script = ExtResource("14_xdopl")
 z_index = 1000
 position = Vector2(7099, 637)
 scale = Vector2(0.5, 0.5)
-floor_max_angle = 1.3369222
+floor_max_angle = 1.6667894
 
-[node name="Bloop A3" parent="." unique_id=780976596 instance=ExtResource("15_c6i7l")]
+[node name="Bloop A3" parent="." unique_id=399457538 instance=ExtResource("16_uyji0")]
+position = Vector2(7099, 637)
+scale = Vector2(0.51, 0.51)
+floor_max_angle = 1.5620697
+script = ExtResource("17_i8j42")
+
+[node name="Bloop A4" parent="." unique_id=1630843881 instance=ExtResource("16_37gll")]
 z_index = 1000
 position = Vector2(7099, 637)
+scale = Vector2(0.5, 0.5)
+floor_max_angle = 1.6161749
 
-[node name="A6" type="AnimatedSprite2D" parent="." unique_id=606216215]
-visible = false
-sprite_frames = SubResource("SpriteFrames_k2grx")
-autoplay = "default"
+[node name="Bloop B1" parent="." unique_id=1620903039 instance=ExtResource("19_hiwaj")]
+z_index = 999
+position = Vector2(7099, 637)
+scale = Vector2(0.5, 0.5)
+floor_stop_on_slope = false
+floor_max_angle = 1.712168
+script = ExtResource("20_0xm52")
 
-[node name="A4" type="AnimatedSprite2D" parent="." unique_id=1994714085]
-visible = false
-sprite_frames = SubResource("SpriteFrames_a5fxg")
-autoplay = "default"
+[node name="Bloop B2" parent="." unique_id=1200268233 instance=ExtResource("21_0xm52")]
+z_index = 999
+position = Vector2(7099, 637)
+scale = Vector2(0.5, 0.5)
+floor_stop_on_slope = false
+floor_max_angle = 1.6563175
+
+[node name="Bloop B3" parent="." unique_id=1708943557 instance=ExtResource("22_c6i7l")]
+z_index = 999
+position = Vector2(7099, 637)
+scale = Vector2(0.5, 0.5)
+floor_max_angle = 1.5411258
+script = ExtResource("23_o24hg")
+
+[node name="Bloop B4" parent="." unique_id=2071476197 instance=ExtResource("24_x6qqq")]
+position = Vector2(7099, 637)
+floor_max_angle = 1.4556046
+script = ExtResource("25_lro86")
+
+[node name="Bloop B5" parent="." unique_id=170748315 instance=ExtResource("26_3e6mj")]
+z_index = 999
+position = Vector2(7099, 637)
+scale = Vector2(0.5, 0.5)
+floor_max_angle = 1.3386675
+script = ExtResource("27_8wk56")

@@ -53,8 +53,8 @@ func handle_acceleration(input_axis, delta):
 		if is_on_floor():
 			if !audio_stream_player_foley.playing:
 				audio_stream_player_foley.play()
-			#if !audio_stream_player_steps.playing:
-				#audio_stream_player_steps.play()
+			if !audio_stream_player_steps.playing:
+				audio_stream_player_steps.play()
 				
 				
 				
