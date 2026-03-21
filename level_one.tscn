@@ -27,6 +27,9 @@
 [ext_resource type="Script" uid="uid://b0mhh70r00beh" path="res://bloop_b_4.gd" id="25_lro86"]
 [ext_resource type="PackedScene" uid="uid://doynpf0faaowm" path="res://bloop_b_5.tscn" id="26_3e6mj"]
 [ext_resource type="Script" uid="uid://b0vjx2t1i8acs" path="res://bloop_b_5.gd" id="27_8wk56"]
+[ext_resource type="PackedScene" uid="uid://c031c7xx0cfk4" path="res://ferris wheel.tscn" id="28_8wk56"]
+[ext_resource type="PackedScene" uid="uid://b2v51ye1kpx67" path="res://Thingus.tscn" id="29_vcd2h"]
+[ext_resource type="PackedScene" uid="uid://cesw6j4movcvq" path="res://grong.tscn" id="30_jecxw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bo08i"]
 size = Vector2(7918.5, 244)
@@ -39,6 +42,189 @@ size = Vector2(702, 908)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6t2mo"]
 radius = 166.41214
+
+[sub_resource type="Animation" id="Animation_jecxw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(8707, 192)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_4rbyc"]
+resource_name = "thingus"
+length = 9.99
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 9.99),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(8707, 192), Vector2(-1138, 271)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 9.99),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bhjt1"]
+_data = {
+&"RESET": SubResource("Animation_jecxw"),
+&"thingus": SubResource("Animation_4rbyc")
+}
+
+[sub_resource type="Animation" id="Animation_yn46s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-823, 968)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_2uqe7"]
+resource_name = "thing 2 "
+length = 12.02
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 12.02),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-823, 968), Vector2(8473, 1141)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 12.02),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 2.926917]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_010df"]
+_data = {
+&"RESET": SubResource("Animation_yn46s"),
+&"thing 2 ": SubResource("Animation_2uqe7")
+}
+
+[sub_resource type="Animation" id="Animation_bhjt1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-961, 773)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_52squ"]
+resource_name = "grong"
+length = 12.03
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6.01, 11.97),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-961, 773), Vector2(3717.461, 784.04596), Vector2(8357, 795)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 6.01, 11.97),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 6.2831855, 6.2831855]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yn46s"]
+_data = {
+&"RESET": SubResource("Animation_bhjt1"),
+&"grong": SubResource("Animation_52squ")
+}
 
 [node name="Level_One" type="Node2D" unique_id=145660808]
 
@@ -216,3 +402,29 @@ position = Vector2(7099, 637)
 scale = Vector2(0.5, 0.5)
 floor_max_angle = 1.3386675
 script = ExtResource("27_8wk56")
+
+[node name="Ferris Wheel" parent="." unique_id=689616394 instance=ExtResource("28_8wk56")]
+z_index = 1203
+position = Vector2(4256, 428)
+scale = Vector2(0.69, 0.69)
+
+[node name="Thingus 1" parent="." unique_id=1921573420 instance=ExtResource("29_vcd2h")]
+z_index = 600
+position = Vector2(8707, 192)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Thingus 1" unique_id=1378582507]
+libraries/ = SubResource("AnimationLibrary_bhjt1")
+autoplay = &"thingus"
+
+[node name="Thingus 2" parent="." unique_id=315856843 instance=ExtResource("29_vcd2h")]
+position = Vector2(-823, 968)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Thingus 2" unique_id=1435647408]
+libraries/ = SubResource("AnimationLibrary_010df")
+
+[node name="Grong" parent="." unique_id=1488685152 instance=ExtResource("30_jecxw")]
+position = Vector2(-961, 773)
+scale = Vector2(0.5, 0.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Grong" unique_id=1213990009]
+libraries/ = SubResource("AnimationLibrary_yn46s")
