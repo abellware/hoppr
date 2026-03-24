@@ -18,6 +18,7 @@ General/should_load_by_name=true
 config/name="hoppr"
 run/main_scene="uid://bb7ctrtb171xm"
 config/features=PackedStringArray("4.6", "GL Compatibility")
+boot_splash/bg_color=Color(1, 1, 1, 1)
 boot_splash/image="uid://dh5iabrgb7g1y"
 config/icon="res://icon.svg"
 boot_splash/minimum_display_time=1000

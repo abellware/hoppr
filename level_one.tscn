@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bb7ctrtb171xm"]
 
 [ext_resource type="Texture2D" uid="uid://b8tv5m0k4opur" path="res://assets/images/Level_One/level one v02.png" id="1_ojold"]
-[ext_resource type="AudioStream" uid="uid://4j7ladbonk5n" path="res://assets/audio/2026-02-26 rabbit hopper crickets.wav" id="2_0l1we"]
 [ext_resource type="PackedScene" uid="uid://ci5tfgbab5yxg" path="res://player.tscn" id="2_bo08i"]
 [ext_resource type="Texture2D" uid="uid://bf55ntilwyuep" path="res://assets/images/level one v02grasstop.png" id="2_xq862"]
 [ext_resource type="AudioStream" uid="uid://cswk7gsbxg8gk" path="res://assets/audio/2026-02-26 rabbit hopper coin.wav" id="3_466b2"]
@@ -11,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://duq8keek7cgi8" path="res://tree_a.tscn" id="4_xsnk2"]
 [ext_resource type="PackedScene" uid="uid://dwbuydo61f326" path="res://capybara.tscn" id="5_l6eyr"]
 [ext_resource type="PackedScene" uid="uid://dwwhbpa8m33ch" path="res://level_completed.tscn" id="6_l6eyr"]
+[ext_resource type="AudioStream" uid="uid://bsjips4nsunpj" path="res://assets/audio/2026-03-22 vagabond king.wav" id="10_4rbyc"]
 [ext_resource type="AudioStream" uid="uid://scvxa0pt5doy" path="res://assets/audio/2026-02-26 rabbit hopper squish.wav" id="11_6t2mo"]
 [ext_resource type="PackedScene" uid="uid://bd6n65hdp5i6t" path="res://bloop_gang.tscn" id="13_rnwmu"]
 [ext_resource type="Script" uid="uid://cixlr5yfxgsf6" path="res://bloop_gang.gd" id="14_xdopl"]
@@ -29,7 +29,8 @@
 [ext_resource type="Script" uid="uid://b0vjx2t1i8acs" path="res://bloop_b_5.gd" id="27_8wk56"]
 [ext_resource type="PackedScene" uid="uid://c031c7xx0cfk4" path="res://ferris wheel.tscn" id="28_8wk56"]
 [ext_resource type="PackedScene" uid="uid://b2v51ye1kpx67" path="res://Thingus.tscn" id="29_vcd2h"]
-[ext_resource type="PackedScene" uid="uid://cesw6j4movcvq" path="res://grong.tscn" id="30_jecxw"]
+[ext_resource type="AudioStream" uid="uid://bc21khg5k45fk" path="res://assets/audio/2026-03-21 squeak.wav" id="31_4rbyc"]
+[ext_resource type="Texture2D" uid="uid://cfhgg2f07s7ka" path="res://assets/images/Tree B.png" id="32_bhjt1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bo08i"]
 size = Vector2(7918.5, 244)
@@ -43,36 +44,9 @@ size = Vector2(702, 908)
 [sub_resource type="CircleShape2D" id="CircleShape2D_6t2mo"]
 radius = 166.41214
 
-[sub_resource type="Animation" id="Animation_jecxw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(8707, 192)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="Animation" id="Animation_4rbyc"]
-resource_name = "thingus"
-length = 9.99
+[sub_resource type="Animation" id="Animation_yn46s"]
+length = 10.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -83,7 +57,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 9.99),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(8707, 192), Vector2(-1138, 271)]
+"values": [Vector2(8460, 843), Vector2(-769, 801)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -96,39 +70,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 0.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_bhjt1"]
-_data = {
-&"RESET": SubResource("Animation_jecxw"),
-&"thingus": SubResource("Animation_4rbyc")
-}
-
-[sub_resource type="Animation" id="Animation_yn46s"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-823, 968)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_2uqe7"]
@@ -165,67 +106,6 @@ _data = {
 &"thing 2 ": SubResource("Animation_2uqe7")
 }
 
-[sub_resource type="Animation" id="Animation_bhjt1"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-961, 773)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="Animation" id="Animation_52squ"]
-resource_name = "grong"
-length = 12.03
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 6.01, 11.97),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-961, 773), Vector2(3717.461, 784.04596), Vector2(8357, 795)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 6.01, 11.97),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 6.2831855, 6.2831855]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_yn46s"]
-_data = {
-&"RESET": SubResource("Animation_bhjt1"),
-&"grong": SubResource("Animation_52squ")
-}
-
 [node name="Level_One" type="Node2D" unique_id=145660808]
 
 [node name="background" type="Sprite2D" parent="." unique_id=1064266428]
@@ -256,10 +136,6 @@ drag_horizontal_enabled = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2012263429]
 collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1531028913]
-position = Vector2(3797, 1456)
-shape = SubResource("RectangleShape2D_bo08i")
 
 [node name="CollisionShape2D3 top brake" type="CollisionShape2D" parent="StaticBody2D" unique_id=771908557]
 position = Vector2(3813, -122)
@@ -296,6 +172,31 @@ z_index = 173
 position = Vector2(2141, 337.00003)
 scale = Vector2(0.325, 0.325)
 
+[node name="OrangeB6" parent="." unique_id=348592629 instance=ExtResource("3_foyw7")]
+z_index = 173
+position = Vector2(5761, 287)
+scale = Vector2(0.325, 0.325)
+
+[node name="OrangeB7" parent="." unique_id=1212562141 instance=ExtResource("3_foyw7")]
+z_index = 173
+position = Vector2(6020, 167.955)
+scale = Vector2(0.325, 0.325)
+
+[node name="OrangeB8" parent="." unique_id=2064345873 instance=ExtResource("3_foyw7")]
+z_index = 173
+position = Vector2(5893.535, 452.95)
+scale = Vector2(0.325, 0.325)
+
+[node name="OrangeB9" parent="." unique_id=1089973740 instance=ExtResource("3_foyw7")]
+z_index = 173
+position = Vector2(6219.865, 432.39)
+scale = Vector2(0.325, 0.325)
+
+[node name="OrangeB10" parent="." unique_id=560515437 instance=ExtResource("3_foyw7")]
+z_index = 173
+position = Vector2(6071, 329.65)
+scale = Vector2(0.325, 0.325)
+
 [node name="tree A" parent="." unique_id=747250851 instance=ExtResource("4_xsnk2")]
 position = Vector2(2011.0001, 343)
 scale = Vector2(0.63, 0.63)
@@ -316,8 +217,13 @@ scale = Vector2(0.295, 0.295)
 position = Vector2(1984, 180)
 scale = Vector2(0.295, 0.295)
 
+[node name="Orange6 mill" parent="." unique_id=1748379232 instance=ExtResource("3_foyw7")]
+position = Vector2(4548, 490)
+scale = Vector2(0.295, 0.295)
+
 [node name="Orange6 capy" parent="." unique_id=2128262089 instance=ExtResource("3_foyw7")]
-position = Vector2(7415, 548.875)
+z_index = 47
+position = Vector2(7415, 343.38)
 scale = Vector2(0.295, 0.295)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1912141322]
@@ -331,14 +237,14 @@ autoplay = true
 bus = &"SoundFXBuss"
 
 [node name="music" type="AudioStreamPlayer" parent="." unique_id=102844333]
-stream = ExtResource("2_0l1we")
+stream = ExtResource("10_4rbyc")
 autoplay = true
 bus = &"MusicBuss"
 
 [node name="Capybara" parent="." unique_id=2070910731 instance=ExtResource("5_l6eyr")]
 z_index = 72
-position = Vector2(7400.9995, 682)
-scale = Vector2(0.445, 0.445)
+position = Vector2(7401, 507.21)
+scale = Vector2(0.58, 0.58)
 
 [node name="AudioStreamPlayer_squish" type="AudioStreamPlayer" parent="." unique_id=2043633009]
 stream = ExtResource("11_6t2mo")
@@ -408,23 +314,23 @@ z_index = 1203
 position = Vector2(4256, 428)
 scale = Vector2(0.69, 0.69)
 
-[node name="Thingus 1" parent="." unique_id=1921573420 instance=ExtResource("29_vcd2h")]
-z_index = 600
-position = Vector2(8707, 192)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Thingus 1" unique_id=1378582507]
-libraries/ = SubResource("AnimationLibrary_bhjt1")
-autoplay = &"thingus"
-
 [node name="Thingus 2" parent="." unique_id=315856843 instance=ExtResource("29_vcd2h")]
-position = Vector2(-823, 968)
+position = Vector2(8460, 843)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Thingus 2" unique_id=1435647408]
 libraries/ = SubResource("AnimationLibrary_010df")
+autoplay = &"RESET"
 
-[node name="Grong" parent="." unique_id=1488685152 instance=ExtResource("30_jecxw")]
-position = Vector2(-961, 773)
-scale = Vector2(0.5, 0.5)
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=609472462]
+position = Vector2(4254, 508)
+stream = ExtResource("31_4rbyc")
+volume_db = 10.606
+autoplay = true
+max_distance = 4096.0
+attenuation = 0.59460354
+bus = &"SoundFXBuss"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Grong" unique_id=1213990009]
-libraries/ = SubResource("AnimationLibrary_yn46s")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1757455320]
+z_index = -107
+position = Vector2(6029, 400)
+texture = ExtResource("32_bhjt1")

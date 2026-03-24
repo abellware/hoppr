@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://cb3ih3q21np2t" path="res://orange.gd" id="1_aoevm"]
 [ext_resource type="Texture2D" uid="uid://drognw20bwrk5" path="res://assets/images/tree and oranges/Orange.png" id="1_vnrxy"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aoevm"]
-size = Vector2(381, 393)
+[sub_resource type="CircleShape2D" id="CircleShape2D_aoevm"]
+radius = 196.87686
 
 [node name="Orange" type="Area2D" unique_id=1295019906 groups=["Oranges"]]
 collision_layer = 8
@@ -16,7 +16,6 @@ texture = ExtResource("1_vnrxy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=808103517]
 position = Vector2(-1.5, 3.5)
-shape = SubResource("RectangleShape2D_aoevm")
+shape = SubResource("CircleShape2D_aoevm")
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

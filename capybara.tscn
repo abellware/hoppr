@@ -1,15 +1,29 @@
 [gd_scene format=3 uid="uid://dwbuydo61f326"]
 
 [ext_resource type="Texture2D" uid="uid://bdre1bsq5vurd" path="res://assets/images/capybara/2026-03-02 capybara A.png" id="1_ml7vp"]
+[ext_resource type="Script" uid="uid://b7p4ngwpf2ku3" path="res://level_change_area.gd" id="2_5h5f7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ml7vp"]
-size = Vector2(854, 1103)
+size = Vector2(646, 1084)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ji052"]
+size = Vector2(637, 20)
 
 [node name="Capybara" type="StaticBody2D" unique_id=645510272]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1681739742]
-position = Vector2(14, 371.5)
+position = Vector2(-7, 381)
 shape = SubResource("RectangleShape2D_ml7vp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1969422806]
 texture = ExtResource("1_ml7vp")
+
+[node name="level change area" type="Area2D" parent="." unique_id=232549522]
+position = Vector2(15.5, -176)
+script = ExtResource("2_5h5f7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level change area" unique_id=1013035095]
+position = Vector2(-27, 0)
+shape = SubResource("RectangleShape2D_ji052")
+
+[connection signal="area_entered" from="level change area" to="level change area" method="_on_area_entered"]
