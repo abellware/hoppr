@@ -38,6 +38,15 @@ WorldAudioManager="*uid://caqrtyrtbdfoo"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 
+[editor_plugins]
+
+enabled=PackedStringArray()
+
+[gui]
+
+theme/custom="uid://btff1rwa3f8vo"
+theme/custom_font="uid://bqppb5qw11fdi"
+
 [input]
 
 ui_up={
@@ -49,12 +58,30 @@ ui_up={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://addons/maaacks_menus_template/base/translations/menus_translations.en.translation", "res://addons/maaacks_menus_template/base/translations/menus_translations.fr.translation", "res://addons/maaacks_game_template/base/translations/menus_translations.en.translation", "res://addons/maaacks_game_template/base/translations/menus_translations.fr.translation")
+
 [layer_names]
 
 2d_physics/layer_1="World"
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Hazard"
 2d_physics/layer_4="Coin"
+
+[maaacks_game_template]
+
+disable_install_audio_busses=true
+disable_update_check=false
+disable_install_wizard=true
+copy_path="res://"
+
+[maaacks_menus_template]
+
+disable_install_audio_busses=true
+disable_update_check=false
+disable_install_wizard=true
+copy_path="res://"
 
 [physics]
 
