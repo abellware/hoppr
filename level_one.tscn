@@ -31,6 +31,11 @@
 [ext_resource type="PackedScene" uid="uid://b2v51ye1kpx67" path="res://Thingus.tscn" id="29_vcd2h"]
 [ext_resource type="AudioStream" uid="uid://bc21khg5k45fk" path="res://assets/audio/2026-03-21 squeak.wav" id="31_4rbyc"]
 [ext_resource type="Texture2D" uid="uid://cfhgg2f07s7ka" path="res://assets/images/Tree B.png" id="32_bhjt1"]
+[ext_resource type="PackedScene" uid="uid://jmsrj2isfgpb" path="res://apple_goal.tscn" id="33_yn46s"]
+
+[sub_resource type="GDScript" id="GDScript_bhjt1"]
+script/source = "extends Node2D
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bo08i"]
 size = Vector2(7918.5, 244)
@@ -107,6 +112,7 @@ _data = {
 }
 
 [node name="Level_One" type="Node2D" unique_id=145660808]
+script = SubResource("GDScript_bhjt1")
 
 [node name="background" type="Sprite2D" parent="." unique_id=1064266428]
 z_index = -4096
@@ -165,7 +171,7 @@ script = ExtResource("4_evv1w")
 [node name="CollisionPolygon2D2_floor_B" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=104767899]
 position = Vector2(6197.9995, 1090)
 scale = Vector2(159.39769, 13.540504)
-polygon = PackedVector2Array(-6.750408, -15.213615, -7.170742, -14.327385, -8.488201, -19.497059, -9.322592, -11.816399, -10.997648, -12.259514, -11.756756, -18.758533, -12.308834, -16.173698, -13.293791, -8.197632, -13.739218, 6.7205734, 9.906044, 6.129753, 9.598637, -34.046, 8.695236, -31.535015, 7.5032463, -20.752552, 6.2422523, -5.1696777, 4.096676, -9.083862, 2.954876, -8.049927, 2.2898712, -7.015991, 1.7252464, -8.566895, 1.1041603, -8.7146, -0.5583496, -12.111809, -1.6875992, -13.219597, -2.1706696, -11.816399, -2.998787, -12.998039, -3.8018074, -12.850334, -4.6989365, -14.47509)
+polygon = PackedVector2Array(-6.750408, -15.213615, -7.170742, -14.327385, -8.488201, -19.497059, -9.322592, -11.816399, -10.997648, -12.259514, -11.756756, -18.758533, -12.308834, -16.173698, -13.293791, -8.197632, -13.739218, 6.7205734, 9.906044, 6.129753, 9.43552, -7.976074, 7.892212, -8.197632, 7.5032463, -20.752552, 6.2422523, -5.1696777, 4.096676, -9.083862, 2.954876, -8.049927, 2.2898712, -7.015991, 1.7252464, -8.566895, 1.1041603, -8.7146, -0.5583496, -12.111809, -1.6875992, -13.219597, -2.1706696, -11.816399, -2.998787, -12.998039, -3.8018074, -12.850334, -4.6989365, -14.47509)
 
 [node name="Orange" parent="." unique_id=1295019906 instance=ExtResource("3_foyw7")]
 z_index = 173
@@ -223,7 +229,7 @@ scale = Vector2(0.295, 0.295)
 
 [node name="Orange6 capy" parent="." unique_id=2128262089 instance=ExtResource("3_foyw7")]
 z_index = 47
-position = Vector2(7415, 343.38)
+position = Vector2(7174, 340.99997)
 scale = Vector2(0.295, 0.295)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1912141322]
@@ -243,7 +249,7 @@ bus = &"MusicBuss"
 
 [node name="Capybara" parent="." unique_id=2070910731 instance=ExtResource("5_l6eyr")]
 z_index = 72
-position = Vector2(7401, 507.21)
+position = Vector2(7201.66, 507.21)
 scale = Vector2(0.58, 0.58)
 
 [node name="AudioStreamPlayer_squish" type="AudioStreamPlayer" parent="." unique_id=2043633009]
@@ -334,3 +340,6 @@ bus = &"SoundFXBuss"
 z_index = -107
 position = Vector2(6029, 400)
 texture = ExtResource("32_bhjt1")
+
+[node name="apple" parent="." unique_id=585690289 instance=ExtResource("33_yn46s")]
+position = Vector2(4256, 428)

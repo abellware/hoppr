@@ -19,7 +19,7 @@ config/name="hoppr"
 run/main_scene="uid://bb7ctrtb171xm"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/bg_color=Color(1, 1, 1, 1)
-boot_splash/image="uid://dh5iabrgb7g1y"
+boot_splash/image="uid://1w1l46wuv2w4"
 config/icon="res://icon.svg"
 boot_splash/minimum_display_time=1000
 
@@ -38,13 +38,9 @@ WorldAudioManager="*uid://caqrtyrtbdfoo"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 
-[editor_plugins]
-
-enabled=PackedStringArray()
-
 [gui]
 
-theme/custom="uid://btff1rwa3f8vo"
+theme/custom="res://resources/themes/lore.tres"
 theme/custom_font="uid://bqppb5qw11fdi"
 
 [input]
@@ -57,10 +53,6 @@ ui_up={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
-
-[internationalization]
-
-locale/translations=PackedStringArray("res://addons/maaacks_menus_template/base/translations/menus_translations.en.translation", "res://addons/maaacks_menus_template/base/translations/menus_translations.fr.translation", "res://addons/maaacks_game_template/base/translations/menus_translations.en.translation", "res://addons/maaacks_game_template/base/translations/menus_translations.fr.translation")
 
 [layer_names]
 
