@@ -77,3 +77,8 @@ func update_animations(input_axis):
 		animated_sprite_2d.play("jump")
 	#elif is_on_floor():
 		#animated_sprite_2d.play("jump")
+
+
+func _on_floor_detector_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	if !audio_stream_player_squish.playing:
+				audio_stream_player_squish.play()

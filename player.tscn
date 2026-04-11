@@ -214,7 +214,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_331ug"]
-size = Vector2(134, 178)
+size = Vector2(122, 173)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ny14h"]
 size = Vector2(137, 180)
@@ -229,6 +229,9 @@ stream_4/stream = ExtResource("49_76oay")
 stream_5/stream = ExtResource("50_b4uyv")
 stream_6/stream = ExtResource("51_tw8ou")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oybyf"]
+size = Vector2(113, 20)
+
 [node name="Player" type="CharacterBody2D" unique_id=495406967]
 collision_layer = 2
 floor_stop_on_slope = false
@@ -242,7 +245,7 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=997646681]
-position = Vector2(-1, 0)
+position = Vector2(3, 2.5)
 shape = SubResource("RectangleShape2D_331ug")
 
 [node name="CoinDetector" type="Area2D" parent="." unique_id=1393916279]
@@ -273,4 +276,11 @@ bus = &"SoundFXBuss"
 stream = SubResource("AudioStreamRandomizer_ygbnx")
 bus = &"SoundFXBuss"
 
+[node name="FloorDetector" type="Area2D" parent="." unique_id=1330683823]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FloorDetector" unique_id=258563863]
+position = Vector2(-3, 78)
+shape = SubResource("RectangleShape2D_oybyf")
+
 [connection signal="area_entered" from="CoinDetector" to="." method="_on_coin_detector_area_entered"]
+[connection signal="area_shape_entered" from="FloorDetector" to="." method="_on_floor_detector_area_shape_entered"]
