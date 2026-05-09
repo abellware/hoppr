@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://8t0mdhs4ncvt"]
+
+[ext_resource type="Texture2D" uid="uid://dldym78jokdct" path="res://assets/images/level two v01 top.png" id="1_cnkpv"]
+[ext_resource type="Texture2D" uid="uid://1fwhd0y0rvxc" path="res://assets/images/level two v01 back.png" id="2_72vtx"]
+[ext_resource type="PackedScene" uid="uid://ci5tfgbab5yxg" path="res://player.tscn" id="3_72vtx"]
+[ext_resource type="PackedScene" uid="uid://dwbuydo61f326" path="res://capybara.tscn" id="4_m7216"]
+[ext_resource type="AudioStream" uid="uid://b7js887vfmmcd" path="res://assets/audio/2026-04-15 satermaron_001.wav" id="5_m7216"]
+[ext_resource type="Script" uid="uid://bpq0jp4lakb0g" path="res://floor_squisher.gd" id="6_ca72b"]
+[ext_resource type="AudioStream" uid="uid://dhxltk0864llm" path="res://assets/audio/2026-04-30 splut.wav" id="7_ca72b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72vtx"]
+size = Vector2(185, 560)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_72vtx"]
+radius = 123.03658
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lfs58"]
+radius = 93.193344
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m7216"]
+radius = 108.66462
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3k6fr"]
+radius = 31.400637
+
+[node name="Level Two Node 2D" type="Node2D" unique_id=638005471]
+
+[node name="BackgroundForeground" type="Sprite2D" parent="." unique_id=629565025]
+z_index = 10
+position = Vector2(3840, 540)
+texture = ExtResource("1_cnkpv")
+
+[node name="BackgroundBackground" type="Sprite2D" parent="." unique_id=1788343442]
+position = Vector2(3840, 540)
+texture = ExtResource("2_72vtx")
+
+[node name="Collision points" type="StaticBody2D" parent="." unique_id=1367457031]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionPolygon2D92" type="CollisionPolygon2D" parent="Collision points" unique_id=1005346374]
+position = Vector2(3840, 540)
+polygon = PackedVector2Array(-673, 208, -864, 206, -864, 207.70001, -866, 208.79999, -866, 298, -958, 300, -958, 421, -1084, 423, -1087, 423, -1087, 540, -852.1001, 540, -853, 425, -853, 331.90002, -673, 330)
+
+[node name="CollisionPolygon2D95" type="CollisionPolygon2D" parent="Collision points" unique_id=2024363448]
+position = Vector2(3840, 540)
+polygon = PackedVector2Array(-3195, 286.7, -3195, 288.3, -3214.4, 292, -3218.5, 292, -3235.5, 302, -3237.8, 302, -3255.8, 320, -3257.2, 320, -3269.2, 343, -3270.7, 343, -3274.7, 367, -3276.3, 367, -3272, 396.3, -3272, 400.5, -3261, 420.59998, -3261, 422.8, -3244, 439.8, -3244, 441.2, -3225, 452.09998, -3225, 453.59998, -3205, 458.5, -3205, 460, -3174.7, 460, -3159.7, 455, -3155.4, 455, -3141.4, 446, -3139.2, 446, -3130.2, 437, -3128, 437, -3117, 423, -3115.7, 423, -3106.7, 402, -3105.3, 402, -3102.2, 380, -3100.8, 380, -3102, 368.8, -3102, 359.7, -3108, 342.5, -3108, 339.40002, -3120, 322.3, -3120, 320.09998, -3133, 308, -3133, 306.8, -3157, 293.7, -3157, 292.3)
+
+[node name="CollisionPolygon2D97" type="CollisionPolygon2D" parent="Collision points" unique_id=520356497]
+position = Vector2(3840, 540)
+polygon = PackedVector2Array(-2603, 298.90002, -2603, 300.3, -2611.4, 302, -2615.6, 302, -2628.5, 310, -2630.9, 310, -2642.9, 323, -2644.3, 323, -2651.3, 339, -2652.7, 339, -2655, 351.8, -2655, 360.3, -2652, 371, -2652, 374.59998, -2645, 385.59998, -2645, 387.90002, -2632, 399.90002, -2632, 401.3, -2617, 408.2, -2617, 409.8, -2602, 411.7, -2602, 413.2, -2589.8, 412, -2582.6, 412, -2573.6, 408, -2570.3, 408, -2548.3, 389, -2546.8, 389, -2541.8, 379, -2540.3, 379, -2537.3, 362, -2535.6, 362, -2540, 337.59998, -2540, 334.3, -2559, 312.2, -2559, 310.7, -2581, 301.5, -2581, 300.09998)
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Collision points" unique_id=1668586952]
+position = Vector2(3840, 540)
+polygon = PackedVector2Array(1547, -289, 1547, -286.9, 1526, -266.9, 1526, -77.100006, 1547, -57.200012, 1547, -55, 1725.8999, -55, 1745.7998, -76, 1748, -76, 1748, -266.9, 1727, -286.9, 1727, -289)
+
+[node name="CollisionPolygon2D30" type="CollisionPolygon2D" parent="Collision points" unique_id=427460875]
+position = Vector2(3840, 540)
+polygon = PackedVector2Array(-1644, -119, -1644, -116.70001, -1648, -111.70001, -1648, -101.899994, -1613, 171.29999, -1613, 180.29999, -1611, 187, -1611, 193.09998, -1608, 195.09998, -1608, 198.20001, -1601.5, 195, -1599.2, 195, -1272.2, -104, -1270.7, -104, -1269.7, -106.29999, -1274, -111.70001, -1274, -114)
+
+[node name="CollisionPolygon2D35" type="CollisionPolygon2D" parent="Collision points" unique_id=1554885456]
+position = Vector2(3840, 540)
+polygon = PackedVector2Array(2470, -76.20001, 2470, -74.79999, 2462.7998, -74, 2457.6, -74, 2439.6, -67, 2436.4, -67, 2415.4, -52, 2413.1, -52, 2400.1, -38, 2398.9, -38, 2388.9, -23, 2387.7002, -23, 2379.7002, -5, 2378.2998, -5, 2371.2998, 32, 2369.7998, 32, 2373, 66.20001, 2373, 71.400024, 2387, 103.29999, 2387, 105.70001, 2396, 116.599976, 2396, 118.900024, 2414, 135.90002, 2414, 137.09998, 2427, 145, 2427, 146.40002, 2441, 152, 1924, 152, 1921, 156, 1919, 156, 1919, 476.8, 1924.2002, 482, 2558.7998, 482, 2563, 477.8, 2563, 157, 2559, 154, 2559, 152, 2516.9, 152, 2519.5, 151, 2522.6, 151, 2539.6, 139, 2541.7998, 139, 2556.7998, 124, 2558.1, 124, 2569, 108, 2570.2998, 108, 2578.2998, 90, 2579.6, 90, 2584.5, 70, 2585.9, 70, 2587, 29, 2587, 21.700012, 2581, 1.7000122, 2581, -1.5, 2573, -16.599976, 2573, -18.700012, 2562, -32.700012, 2562, -34.899994, 2545, -51, 2545, -52.100006, 2531, -61.200012, 2531, -62.399994, 2510, -70.5, 2510, -71.79999)
+
+[node name="CollisionPolygon2D38" type="CollisionPolygon2D" parent="Collision points" unique_id=1904322996]
+position = Vector2(3840, 540)
+polygon = PackedVector2Array(3402, -3.5, 3391, -6.700012, 3391, -3.7999878, 2965.1, 506, 2963.7998, 506, 2962.7002, 508.19995, 2966, 512.6, 2966, 515, 2973, 515, 2973, 515.9, 3620.2002, 540, 3807.2002, 540, 3402, -0.7000122)
+
+[node name="CollisionPolygon2D41" type="CollisionPolygon2D" parent="Collision points" unique_id=432745604]
+position = Vector2(3840, 540)
+polygon = PackedVector2Array(-2117, 11, -2117, 116, -1993, 114, -1990, 114, -1992, 14, -1992, 11)
+
+[node name="CollisionPolygon2D54" type="CollisionPolygon2D" parent="Collision points" unique_id=1614828357]
+position = Vector2(3840, 540)
+polygon = PackedVector2Array(-1134, 64.79999, -1134, 68.099976, -1271.8999, 216, -1275.2, 216, -1271.2, 224, -1245, 224, -1124.8999, 219, -1121.8999, 219, -1125, 118.900024, -1125, 84, -1126, 84, -1126, 68.79999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision points" unique_id=1448667647]
+position = Vector2(144.5, 733)
+shape = SubResource("RectangleShape2D_72vtx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Collision points" unique_id=1629664213]
+position = Vector2(1220, 281)
+shape = SubResource("CircleShape2D_72vtx")
+
+[node name="WallAndFloor" type="CollisionPolygon2D" parent="Collision points" unique_id=233115549]
+polygon = PackedVector2Array(-10, 53, -3, 1078, 7682, 1081, 7681, 1, 7900, 19, 7909, 1235, -154, 1271, -122, -52)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Collision points" unique_id=783925919]
+position = Vector2(1805, 953)
+shape = SubResource("CircleShape2D_lfs58")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Collision points" unique_id=241048679]
+position = Vector2(3596, 953)
+shape = SubResource("CircleShape2D_m7216")
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Collision points" unique_id=627552561]
+position = Vector2(85.57842, 15.059325)
+scale = Vector2(0.78453463, 0.8898305)
+polygon = PackedVector2Array(234, 197, 233, 197, 306, 222, 317, 291, 483.62625, 224.69522, 546.0836, 143.78094, 514, 73, 459, 136, 458, 55, 357, 66, 271, 130, 233, 196)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Collision points" unique_id=489325572]
+position = Vector2(155.51465, 12.869193)
+scale = Vector2(0.81550807, 0.8754194)
+polygon = PackedVector2Array(663, 240, 661, 233, 674, 276, 799, 297, 833, 238, 847, 148, 728, 153, 660, 232)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Collision points" unique_id=390047710]
+position = Vector2(610, 548)
+polygon = PackedVector2Array(16, -17, 52, -40, -5, -58, -98, 62, 127, 66, 52, -40)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Collision points" unique_id=1228456623]
+position = Vector2(1377, 752)
+shape = SubResource("CircleShape2D_3k6fr")
+
+[node name="Player" parent="." unique_id=495406967 instance=ExtResource("3_72vtx")]
+z_index = 100
+position = Vector2(126, 46)
+floor_stop_on_slope = true
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1566040847]
+position = Vector2(457, 364)
+limit_left = 3
+limit_top = 4
+limit_right = 7690
+limit_bottom = 1194
+limit_smoothed = true
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+
+[node name="Capybara" parent="." unique_id=645510272 instance=ExtResource("4_m7216")]
+position = Vector2(6711, 534)
+scale = Vector2(0.605, 0.605)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2084617102]
+stream = ExtResource("5_m7216")
+autoplay = true
+bus = &"MusicBuss"
+
+[node name="floor squisher" type="Area2D" parent="." unique_id=964570795]
+script = ExtResource("6_ca72b")
+
+[node name="WallAndFloor2" type="CollisionPolygon2D" parent="floor squisher" unique_id=1568467403]
+polygon = PackedVector2Array(238, 423, 269, 1059, 7657, 1053, 7779, 980, 7900, 19, 7909, 1235, -154, 1271, 6, 423)
+
+[node name="AudioStreamPlayer_squish" type="AudioStreamPlayer" parent="." unique_id=28547953]
+stream = ExtResource("7_ca72b")
+bus = &"SoundFXBuss"
+
+[node name="AudioStreamPlayer_splut2" type="AudioStreamPlayer" parent="." unique_id=1221365515]
+stream = ExtResource("7_ca72b")

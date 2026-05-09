@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://xtheyioqxvgc"
+path="res://.godot/imported/2026-03-23 hablert.wav-9336d3c94b62275f65569df455ead2cc.sample"
+
+[deps]
+
+source_file="res://assets/audio/2026-03-23 hablert.wav"
+dest_files=["res://.godot/imported/2026-03-23 hablert.wav-9336d3c94b62275f65569df455ead2cc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

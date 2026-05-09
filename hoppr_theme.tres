@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://btff1rwa3f8vo"]
+
+[ext_resource type="FontFile" uid="uid://bqppb5qw11fdi" path="res://assets/TAYRugPull.otf" id="1_5fu1q"]
+
+[resource]
+default_font = ExtResource("1_5fu1q")
+default_font_size = 36

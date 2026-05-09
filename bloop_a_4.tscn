@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://1vo5om2bqwp8"]
+
+[ext_resource type="Script" uid="uid://blgds7gh4syat" path="res://bloop_a_4.gd" id="1_000o4"]
+[ext_resource type="Texture2D" uid="uid://b8kug4au66u5x" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/1 4 A level.PNG" id="2_whr2a"]
+[ext_resource type="Texture2D" uid="uid://dx86wuxwepo3h" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/2 4 A level.PNG" id="3_1qtg8"]
+[ext_resource type="Texture2D" uid="uid://kdgg38q323g3" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/3 4 A level.PNG" id="4_d3wff"]
+[ext_resource type="Texture2D" uid="uid://cjh4oo1udeg76" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/4 4 A level.PNG" id="5_6a7an"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_etfv0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_whr2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1qtg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d3wff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6a7an")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_py6ql"]
+radius = 77.0
+height = 278.0
+
+[node name="Bloop A4" type="CharacterBody2D" unique_id=1630843881]
+script = ExtResource("1_000o4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=871520152]
+sprite_frames = SubResource("SpriteFrames_etfv0")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=53319002]
+position = Vector2(-156, 341)
+shape = SubResource("CapsuleShape2D_py6ql")

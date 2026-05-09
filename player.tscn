@@ -43,7 +43,7 @@
 [ext_resource type="Texture2D" uid="uid://dvakgu7b612kx" path="res://assets/images/Player/PlayerClimb/PlayerClimb_12.png" id="21_l3lcn"]
 [ext_resource type="AudioStream" uid="uid://53drbjq0m5r3" path="res://assets/audio/2026-02-26 rabbit hopper grass.wav" id="42_3iwfv"]
 [ext_resource type="AudioStream" uid="uid://b24dcn626e1ah" path="res://assets/audio/2026-02-26 rabbit hopper jump.wav" id="43_qwsg1"]
-[ext_resource type="AudioStream" uid="uid://scvxa0pt5doy" path="res://assets/audio/2026-02-26 rabbit hopper squish.wav" id="44_qwsg1"]
+[ext_resource type="AudioStream" uid="uid://dhxltk0864llm" path="res://assets/audio/2026-04-30 splut.wav" id="44_oybyf"]
 [ext_resource type="AudioStream" uid="uid://sgy4b5oeljof" path="res://assets/audio/2026-03-16 foley 001.wav" id="45_oybyf"]
 [ext_resource type="AudioStream" uid="uid://cmitopaqg1fmr" path="res://assets/audio/2026-03-16 foley 002.wav" id="46_ajfva"]
 [ext_resource type="AudioStream" uid="uid://dydiskdq1lycf" path="res://assets/audio/2026-03-16 foley 003.wav" id="47_5ef02"]
@@ -268,7 +268,7 @@ pitch_scale = 0.67
 bus = &"SoundFXBuss"
 
 [node name="AudioStreamPlayer_squish" type="AudioStreamPlayer" parent="." unique_id=213062899]
-stream = ExtResource("44_qwsg1")
+stream = ExtResource("44_oybyf")
 pitch_scale = 0.87
 bus = &"SoundFXBuss"
 

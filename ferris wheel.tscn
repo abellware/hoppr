@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://c031c7xx0cfk4"]
+
+[ext_resource type="Texture2D" uid="uid://ccg7nuq7tmsc6" path="res://assets/images/pinwheel A 3.png" id="1_2gpp4"]
+[ext_resource type="Texture2D" uid="uid://bkoep5jf37bs4" path="res://assets/images/pinwheel C 4.png" id="2_2gpp4"]
+[ext_resource type="Texture2D" uid="uid://b0rij5cy2ibt4" path="res://assets/images/pinwheel B 4.png" id="3_1s7xx"]
+
+[sub_resource type="Animation" id="Animation_2gpp4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody2D/Leg 1:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaticBody2D/CollisionPolygon2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_1s7xx"]
+resource_name = "spinny"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody2D/Leg 1:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -6.2831855]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaticBody2D/CollisionPolygon2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -6.2831855]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oylyv"]
+_data = {
+&"RESET": SubResource("Animation_2gpp4"),
+&"spinny": SubResource("Animation_1s7xx")
+}
+
+[node name="Ferris Wheel" type="Node2D" unique_id=689616394]
+
+[node name="base" type="Sprite2D" parent="." unique_id=1824251106]
+position = Vector2(103, 192)
+texture = ExtResource("1_2gpp4")
+
+[node name="axle" type="Sprite2D" parent="." unique_id=219026064]
+position = Vector2(83.000015, 101.000015)
+scale = Vector2(0.735, 0.735)
+texture = ExtResource("2_2gpp4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1355133260]
+
+[node name="Leg 1" type="Sprite2D" parent="StaticBody2D" unique_id=1302579003]
+z_index = -8
+position = Vector2(-2.000061, -2.0000153)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("3_1s7xx")
+centered = false
+offset = Vector2(-845.355, -340.335)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody2D/Leg 1" unique_id=1137977896]
+root_node = NodePath("../../..")
+libraries/ = SubResource("AnimationLibrary_oylyv")
+autoplay = &"spinny"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=98418713]
+position = Vector2(-2.000061, -2.0000153)
+scale = Vector2(0.65, 0.65)
+polygon = PackedVector2Array(27.692404, 16.923101, 355.38477, 307.69235, 895.3848, 478.4616, 1000.0002, -46.153828, 956.9233, -300.00003, 836.9233, -300.00003, 869.23096, -206.15384, 923.0771, -35.384594, 870.7694, 218.4616, 743.0771, 332.30774, 490.76938, 306.1539, 329.2309, 150.76927, 209.23088, -47.692287)

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dhxltk0864llm"
+path="res://.godot/imported/2026-04-30 splut.wav-82d30edc67b206f7e821064ab5a01f03.sample"
+
+[deps]
+
+source_file="res://assets/audio/2026-04-30 splut.wav"
+dest_files=["res://.godot/imported/2026-04-30 splut.wav-82d30edc67b206f7e821064ab5a01f03.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

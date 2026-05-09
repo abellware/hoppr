@@ -24,15 +24,16 @@ func _physics_process(delta):
 	apply_friction(input_axis, delta)
 	update_animations(input_axis)
 	
-	
+	#var was_on_floor
 
 	
 	move_and_slide()
 
-	
-	if is_on_floor():
-		
-		audio_stream_player_squish.play()
+	#new is on floor
+	#if not was_on_floor and is_on_floor():
+		#
+		#audio_stream_player_squish.play()
+		#was_on_floor = is_on_floor()
 
 func apply_gravity(delta):
 	if not is_on_floor():

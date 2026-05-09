@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://5qagy6hn0q2w"]
+
+[ext_resource type="Texture2D" uid="uid://tyog3a8dim6o" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/1 4 B level.PNG" id="1_pkmf8"]
+[ext_resource type="Texture2D" uid="uid://81orpnrhnxhg" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/2 4 B level.PNG" id="2_r3k5j"]
+[ext_resource type="Texture2D" uid="uid://cu00avv8bneqv" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/3 4 B level.PNG" id="3_87ufr"]
+[ext_resource type="Texture2D" uid="uid://be6chfkjwov5b" path="res://assets/images/Bloop_Gang/bloopgang/bloopgang_2/4 4 B level.PNG" id="4_ml3xt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5fwht"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pkmf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_r3k5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_87ufr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ml3xt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kq48x"]
+radius = 48.0
+height = 220.0
+
+[node name="Bloop B4" type="CharacterBody2D" unique_id=2071476197]
+z_index = 999
+scale = Vector2(0.5, 0.5)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=702028587]
+sprite_frames = SubResource("SpriteFrames_5fwht")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=915981706]
+position = Vector2(-62, 386)
+shape = SubResource("CapsuleShape2D_kq48x")

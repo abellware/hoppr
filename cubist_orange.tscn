@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://codua8wabbuxq"]
+
+[ext_resource type="Texture2D" uid="uid://cq84vuu0iapcf" path="res://assets/images/cubist orange.png" id="1_5qp5k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_weiwv"]
+radius = 350.85324
+
+[node name="CubistOrange" type="Area2D" unique_id=1383114706]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1754249496]
+texture = ExtResource("1_5qp5k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1921706971]
+position = Vector2(-63, 162)
+shape = SubResource("CircleShape2D_weiwv")

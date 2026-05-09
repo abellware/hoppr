@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://b2v51ye1kpx67"]
+
+[ext_resource type="Texture2D" uid="uid://bofjgly6c0b8y" path="res://assets/images/Thingwise/Thingwise/Paint Layer 1.PNG" id="1_e5dlp"]
+[ext_resource type="Texture2D" uid="uid://b46fsfqu42my0" path="res://assets/images/Thingwise/Thingwise/Paint Layer 2.PNG" id="2_5e3u1"]
+[ext_resource type="Texture2D" uid="uid://c8fhsgjgqxu1s" path="res://assets/images/Thingwise/Thingwise/Paint Layer 3.PNG" id="3_ml48b"]
+[ext_resource type="Texture2D" uid="uid://deinhyg3wscpr" path="res://assets/images/Thingwise/Thingwise/Paint Layer 4.PNG" id="4_eore3"]
+[ext_resource type="Texture2D" uid="uid://cei823lvvfae5" path="res://assets/images/Thingwise/Thingwise/Paint Layer 5.PNG" id="5_6tcsx"]
+[ext_resource type="Texture2D" uid="uid://c3ppw7r7v1vps" path="res://assets/images/Thingwise/Thingwise/Paint Layer 6.PNG" id="6_shu5h"]
+[ext_resource type="Texture2D" uid="uid://dad342u5wvj36" path="res://assets/images/Thingwise/Thingwise/Paint Layer 7.PNG" id="7_t6dhn"]
+[ext_resource type="Texture2D" uid="uid://d002dcuk3ym8v" path="res://assets/images/Thingwise/Thingwise/Paint Layer 8.PNG" id="8_088pl"]
+[ext_resource type="Texture2D" uid="uid://ccpv3jctpghnk" path="res://assets/images/Thingwise/Thingwise/Paint Layer 9.PNG" id="9_hs0vr"]
+[ext_resource type="Texture2D" uid="uid://d2w70qmg2cqxm" path="res://assets/images/Thingwise/Thingwise/Paint Layer 10.PNG" id="10_7qxws"]
+[ext_resource type="AudioStream" uid="uid://fdhs8oilp0n7" path="res://assets/audio/2026-03-22 flap.wav" id="11_5e3u1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bjldu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_e5dlp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5e3u1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ml48b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_eore3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6tcsx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_shu5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_t6dhn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_088pl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hs0vr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7qxws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hs0vr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e5dlp"]
+radius = 35.0
+height = 924.0
+
+[node name="Node2D" type="Node2D" unique_id=1921573420]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1992656113]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D" unique_id=1133181083]
+sprite_frames = SubResource("SpriteFrames_bjldu")
+autoplay = "default"
+frame_progress = 0.9528922
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=644792425]
+rotation = -1.5568337
+scale = Vector2(1.515, 1.515)
+shape = SubResource("CapsuleShape2D_e5dlp")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1574778073]
+stream = ExtResource("11_5e3u1")
+volume_db = 10.263
+autoplay = true
+max_distance = 711.0
+attenuation = 0.84089655
+bus = &"SoundFXBuss"

@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dwbuydo61f326" path="res://capybara.tscn" id="5_l6eyr"]
 [ext_resource type="PackedScene" uid="uid://dwwhbpa8m33ch" path="res://level_completed.tscn" id="6_l6eyr"]
 [ext_resource type="AudioStream" uid="uid://bsjips4nsunpj" path="res://assets/audio/2026-03-22 vagabond king.wav" id="10_4rbyc"]
-[ext_resource type="AudioStream" uid="uid://scvxa0pt5doy" path="res://assets/audio/2026-02-26 rabbit hopper squish.wav" id="11_6t2mo"]
+[ext_resource type="AudioStream" uid="uid://dhxltk0864llm" path="res://assets/audio/2026-04-30 splut.wav" id="12_52squ"]
 [ext_resource type="PackedScene" uid="uid://bd6n65hdp5i6t" path="res://bloop_gang.tscn" id="13_rnwmu"]
 [ext_resource type="Script" uid="uid://cixlr5yfxgsf6" path="res://bloop_gang.gd" id="14_xdopl"]
 [ext_resource type="PackedScene" uid="uid://c1s26p82pf43q" path="res://bloop_a_2.tscn" id="15_c6i7l"]
@@ -31,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://b2v51ye1kpx67" path="res://Thingus.tscn" id="29_vcd2h"]
 [ext_resource type="AudioStream" uid="uid://bc21khg5k45fk" path="res://assets/audio/2026-03-21 squeak.wav" id="31_4rbyc"]
 [ext_resource type="Texture2D" uid="uid://cfhgg2f07s7ka" path="res://assets/images/Tree B.png" id="32_bhjt1"]
+[ext_resource type="Script" uid="uid://dso78thtdwo65" path="res://floor_enter_thingus.gd" id="33_52squ"]
 [ext_resource type="PackedScene" uid="uid://jmsrj2isfgpb" path="res://apple_goal.tscn" id="33_yn46s"]
 
 [sub_resource type="GDScript" id="GDScript_bhjt1"]
@@ -250,7 +251,8 @@ position = Vector2(7201.66, 507.21)
 scale = Vector2(0.58, 0.58)
 
 [node name="AudioStreamPlayer_squish" type="AudioStreamPlayer" parent="." unique_id=2043633009]
-stream = ExtResource("11_6t2mo")
+stream = ExtResource("12_52squ")
+pitch_scale = 0.81
 bus = &"SoundFXBuss"
 
 [node name="Bloop_Gang A1" parent="." unique_id=23922675 instance=ExtResource("13_rnwmu")]
@@ -341,5 +343,11 @@ texture = ExtResource("32_bhjt1")
 [node name="apple" parent="." unique_id=585690289 instance=ExtResource("33_yn46s")]
 position = Vector2(4256, 428)
 collision_layer = 11
+
+[node name="Floor enter thingus" type="Area2D" parent="." unique_id=2102194395]
+script = ExtResource("33_52squ")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor enter thingus" unique_id=1930432755]
+polygon = PackedVector2Array(23, 22, 20, 382, 228, 429, 456, 488, 658, 662, 822, 890, 1045, 942, 1358, 898, 1662, 945, 1934, 896, 2217, 945, 2764, 922, 3120, 927, 3373, 906, 3723, 846, 4074, 795, 4468, 797, 4989, 797, 5487, 818, 5897, 865, 6362, 862, 6844, 820, 6974, 818, 7002, 442, 7228, 351, 7373, 411, 7384, 722, 7653, 683, 7817, 670, 7786, 1526, 4510, 1352, -399, 1407, -402, -80, 0, -7)
 
 [connection signal="body_entered" from="apple" to="." method="_on_apple_body_entered"]
