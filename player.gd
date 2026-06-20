@@ -7,6 +7,9 @@ const JUMP_VELOCITY = -800.0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+var was_on_floor: bool = false
+var was_on_wall: bool = false
+
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
 @onready var audio_stream_player_steps: AudioStreamPlayer = $"AudioStreamPlayer_steps"
@@ -23,17 +26,17 @@ func _physics_process(delta):
 	handle_acceleration(input_axis, delta)
 	apply_friction(input_axis, delta)
 	update_animations(input_axis)
-	
-	#var was_on_floor
 
-	
 	move_and_slide()
 
-	#new is on floor
-	#if not was_on_floor and is_on_floor():
-		#
-		#audio_stream_player_squish.play()
-		#was_on_floor = is_on_floor()
+	# Play squish when landing on floor or hitting a wall for the first time
+	if not was_on_floor and is_on_floor():
+		audio_stream_player_squish.play()
+	if not was_on_wall and is_on_wall():
+		audio_stream_player_squish.play()
+
+	was_on_floor = is_on_floor()
+	was_on_wall = is_on_wall()
 
 func apply_gravity(delta):
 	if not is_on_floor():

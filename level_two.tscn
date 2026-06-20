@@ -31,7 +31,8 @@ position = Vector2(3840, 540)
 texture = ExtResource("1_cnkpv")
 
 [node name="BackgroundBackground" type="Sprite2D" parent="." unique_id=1788343442]
-position = Vector2(3840, 540)
+position = Vector2(3840, 538)
+scale = Vector2(1, 0.9962963)
 texture = ExtResource("2_72vtx")
 
 [node name="Collision points" type="StaticBody2D" parent="." unique_id=1367457031]
@@ -139,6 +140,8 @@ bus = &"MusicBuss"
 script = ExtResource("6_ca72b")
 
 [node name="WallAndFloor2" type="CollisionPolygon2D" parent="floor squisher" unique_id=1568467403]
+position = Vector2(0, -61.9776)
+scale = Vector2(1, 1.0376399)
 polygon = PackedVector2Array(238, 423, 269, 1059, 7657, 1053, 7779, 980, 7900, 19, 7909, 1235, -154, 1271, 6, 423)
 
 [node name="AudioStreamPlayer_squish" type="AudioStreamPlayer" parent="." unique_id=28547953]

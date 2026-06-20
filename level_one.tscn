@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://ci5tfgbab5yxg" path="res://player.tscn" id="2_bo08i"]
 [ext_resource type="Texture2D" uid="uid://bf55ntilwyuep" path="res://assets/images/level one v02grasstop.png" id="2_xq862"]
 [ext_resource type="AudioStream" uid="uid://cswk7gsbxg8gk" path="res://assets/audio/2026-02-26 rabbit hopper coin.wav" id="3_466b2"]
-[ext_resource type="Texture2D" uid="uid://i0f0c4qnas2m" path="res://assets/images/level one v02matte.png" id="3_evv1w"]
 [ext_resource type="PackedScene" uid="uid://cwl6e3f6jjt0m" path="res://orange.tscn" id="3_foyw7"]
 [ext_resource type="Script" uid="uid://bh5v6v1ank33h" path="res://collision_polygon_2d_floor_a.gd" id="4_evv1w"]
 [ext_resource type="PackedScene" uid="uid://duq8keek7cgi8" path="res://tree_a.tscn" id="4_xsnk2"]
@@ -150,26 +149,20 @@ position = Vector2(3813, -122)
 shape = SubResource("RectangleShape2D_bo08i")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1994549115]
-visible = false
 shape = SubResource("SegmentShape2D_bo08i")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1749684720]
 position = Vector2(663, 907)
 shape = SubResource("CircleShape2D_6t2mo")
 
-[node name="CollisionShape2D5 alpha" type="Sprite2D" parent="StaticBody2D" unique_id=424541004]
-visible = false
-position = Vector2(3844, 540)
-texture = ExtResource("3_evv1w")
-
 [node name="CollisionPolygon2D_floor_A" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=2051074704]
-polygon = PackedVector2Array(25, 21, 2, 506, 124, 478, 217, 425, 245, 358, 272, 310, 302, 318, 386, 428, 434, 489, 593, 603, 696, 716, 728, 792, 799, 889, 903, 951, 1033, 950, 1213, 908, 1404, 917, 1653, 944, 2060, 929, 2111, 942, 2157, 988, 2248, 995, 2298, 948, 2317, 906, 2357, 913, 2419, 980, 2509, 974, 2648, 974, 2795, 967, 2948, 957, 3060, 894, 3157, 956, 3260, 951, 3338, 955, 3444, 972, 3578, 1002, 3877, 960, 4054, 995, 4017, 1282, -230, 1254, -139, 40, -8, 10)
+polygon = PackedVector2Array(25, 21, 2, 506, 68, 581, 381, 712, 529, 712, 738, 697, 728, 792, 799, 889, 903, 951, 1033, 950, 1213, 908, 1404, 917, 1653, 944, 1995, 947, 2111, 942, 2157, 988, 2248, 995, 2298, 948, 2337, 944, 2366, 928, 2419, 980, 2509, 974, 2648, 974, 2795, 967, 2948, 957, 3074, 934, 3157, 956, 3260, 951, 3338, 955, 3444, 972, 3578, 1002, 3877, 960, 4054, 995, 4017, 1282, -230, 1254, -139, 40, -8, 10)
 script = ExtResource("4_evv1w")
 
 [node name="CollisionPolygon2D2_floor_B" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=104767899]
 position = Vector2(6197.9995, 1090)
 scale = Vector2(159.39769, 13.540504)
-polygon = PackedVector2Array(-6.750408, -15.213615, -7.170742, -14.327385, -8.488201, -19.497059, -9.322592, -11.816399, -10.997648, -12.259514, -11.756756, -18.758533, -12.308834, -16.173698, -13.293791, -8.197632, -13.739218, 6.7205734, 9.906044, 6.129753, 9.291229, -81.23774, 9.310051, -8.123779, 7.892212, -8.197632, 7.5032463, -20.752552, 6.2422523, -5.1696777, 4.096676, -9.083862, 2.954876, -8.049927, 2.2898712, -7.015991, 1.7252464, -8.566895, 1.1041603, -8.7146, -0.5583496, -12.111809, -1.6875992, -13.219597, -2.1706696, -11.816399, -2.998787, -12.998039, -3.8018074, -12.850334, -4.6989365, -14.47509)
+polygon = PackedVector2Array(-6.750408, -15.213615, -7.170742, -14.327385, -8.161972, -15.3613205, -9.322592, -11.816399, -10.997648, -12.259514, -11.756756, -18.758533, -12.308834, -16.173698, -13.293791, -8.197632, -13.739218, 6.7205734, 9.906044, 6.129753, 9.291229, -81.23774, 9.310051, -8.123779, 7.892212, -8.197632, 7.5032463, -20.752552, 6.2422523, -5.1696777, 4.096676, -9.083862, 2.954876, -8.049927, 2.2898712, -7.015991, 1.7252464, -8.566895, 1.1041603, -8.7146, -0.5583496, -12.111809, -1.6875992, -13.219597, -2.1706696, -11.816399, -2.998787, -12.998039, -3.8018074, -12.850334, -4.6989365, -14.47509)
 
 [node name="Orange" parent="." unique_id=1295019906 instance=ExtResource("3_foyw7")]
 z_index = 173
@@ -348,6 +341,6 @@ collision_layer = 11
 script = ExtResource("33_52squ")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor enter thingus" unique_id=1930432755]
-polygon = PackedVector2Array(23, 22, 20, 382, 228, 429, 456, 488, 658, 662, 822, 890, 1045, 942, 1358, 898, 1662, 945, 1934, 896, 2217, 945, 2764, 922, 3120, 927, 3373, 906, 3723, 846, 4074, 795, 4468, 797, 4989, 797, 5487, 818, 5897, 865, 6362, 862, 6844, 820, 6974, 818, 7002, 442, 7228, 351, 7373, 411, 7384, 722, 7653, 683, 7817, 670, 7786, 1526, 4510, 1352, -399, 1407, -402, -80, 0, -7)
+polygon = PackedVector2Array(23, 22, 22, 482, 266, 656, 503, 707, 763, 714, 889, 838, 1046, 892, 1365, 858, 1677, 895, 1934, 896, 2219, 900, 2766, 895, 3122, 892, 3448, 866, 3747, 825, 4074, 775, 4615, 804, 5013, 768, 5490, 858, 5897, 865, 6364, 827, 6849, 778, 6968, 718, 7000, 428, 7215, 337, 7373, 411, 7407, 700, 7648, 648, 7817, 670, 7786, 1526, 4510, 1352, 1202, 1393, -399, 1407, -402, -80, 0, -7)
 
 [connection signal="body_entered" from="apple" to="." method="_on_apple_body_entered"]
