@@ -269,7 +269,8 @@ bus = &"SoundFXBuss"
 
 [node name="AudioStreamPlayer_squish" type="AudioStreamPlayer" parent="." unique_id=213062899]
 stream = ExtResource("44_oybyf")
-pitch_scale = 0.87
+volume_db = -5.737
+pitch_scale = 1.15
 bus = &"SoundFXBuss"
 
 [node name="AudioStreamPlayer_foley" type="AudioStreamPlayer" parent="." unique_id=639705754]
