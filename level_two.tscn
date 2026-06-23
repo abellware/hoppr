@@ -3,10 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://dldym78jokdct" path="res://assets/images/level two v01 top.png" id="1_cnkpv"]
 [ext_resource type="Texture2D" uid="uid://1fwhd0y0rvxc" path="res://assets/images/level two v01 back.png" id="2_72vtx"]
 [ext_resource type="PackedScene" uid="uid://ci5tfgbab5yxg" path="res://player.tscn" id="3_72vtx"]
+[ext_resource type="PackedScene" uid="uid://ciywfnewfeeu3" path="res://backto1button.tscn" id="3_qv4wy"]
 [ext_resource type="PackedScene" uid="uid://dwbuydo61f326" path="res://capybara.tscn" id="4_m7216"]
 [ext_resource type="AudioStream" uid="uid://b7js887vfmmcd" path="res://assets/audio/2026-04-15 satermaron_001.wav" id="5_m7216"]
 [ext_resource type="Script" uid="uid://bpq0jp4lakb0g" path="res://floor_squisher.gd" id="6_ca72b"]
 [ext_resource type="AudioStream" uid="uid://dhxltk0864llm" path="res://assets/audio/2026-04-30 splut.wav" id="7_ca72b"]
+[ext_resource type="PackedScene" uid="uid://e3vs2n0548uw" path="res://quitgamebutton.tscn" id="9_e4814"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_72vtx"]
 size = Vector2(185, 560)
@@ -63,7 +65,7 @@ polygon = PackedVector2Array(-1644, -119, -1644, -116.70001, -1648, -111.70001, 
 position = Vector2(3840, 540)
 polygon = PackedVector2Array(2470, -76.20001, 2470, -74.79999, 2462.7998, -74, 2457.6, -74, 2439.6, -67, 2436.4, -67, 2415.4, -52, 2413.1, -52, 2400.1, -38, 2398.9, -38, 2388.9, -23, 2387.7002, -23, 2379.7002, -5, 2378.2998, -5, 2371.2998, 32, 2369.7998, 32, 2373, 66.20001, 2373, 71.400024, 2387, 103.29999, 2387, 105.70001, 2396, 116.599976, 2396, 118.900024, 2414, 135.90002, 2414, 137.09998, 2427, 145, 2427, 146.40002, 2441, 152, 1924, 152, 1921, 156, 1919, 156, 1919, 476.8, 1924.2002, 482, 2558.7998, 482, 2563, 477.8, 2563, 157, 2559, 154, 2559, 152, 2516.9, 152, 2519.5, 151, 2522.6, 151, 2539.6, 139, 2541.7998, 139, 2556.7998, 124, 2558.1, 124, 2569, 108, 2570.2998, 108, 2578.2998, 90, 2579.6, 90, 2584.5, 70, 2585.9, 70, 2587, 29, 2587, 21.700012, 2581, 1.7000122, 2581, -1.5, 2573, -16.599976, 2573, -18.700012, 2562, -32.700012, 2562, -34.899994, 2545, -51, 2545, -52.100006, 2531, -61.200012, 2531, -62.399994, 2510, -70.5, 2510, -71.79999)
 
-[node name="CollisionPolygon2D38" type="CollisionPolygon2D" parent="Collision points" unique_id=1904322996]
+[node name="Coltriangendtrigger" type="CollisionPolygon2D" parent="Collision points" unique_id=1904322996]
 position = Vector2(3840, 540)
 polygon = PackedVector2Array(3402, -3.5, 3391, -6.700012, 3391, -3.7999878, 2965.1, 506, 2963.7998, 506, 2962.7002, 508.19995, 2966, 512.6, 2966, 515, 2973, 515, 2973, 515.9, 3620.2002, 540, 3807.2002, 540, 3402, -0.7000122)
 
@@ -112,6 +114,14 @@ polygon = PackedVector2Array(16, -17, 52, -40, -5, -58, -98, 62, 127, 66, 52, -4
 position = Vector2(1377, 752)
 shape = SubResource("CircleShape2D_3k6fr")
 
+[node name="Control" parent="Collision points" unique_id=981061940 instance=ExtResource("3_qv4wy")]
+z_index = 4096
+offset_left = 7066.0
+offset_top = 483.0
+offset_right = 7066.0
+offset_bottom = 483.0
+scale = Vector2(0.2, 0.2)
+
 [node name="Player" parent="." unique_id=495406967 instance=ExtResource("3_72vtx")]
 z_index = 100
 position = Vector2(126, 46)
@@ -140,8 +150,8 @@ bus = &"MusicBuss"
 script = ExtResource("6_ca72b")
 
 [node name="WallAndFloor2" type="CollisionPolygon2D" parent="floor squisher" unique_id=1568467403]
-position = Vector2(0, -61.9776)
-scale = Vector2(1, 1.0376399)
+position = Vector2(0, -68.67101)
+scale = Vector2(1, 1.0188698)
 polygon = PackedVector2Array(238, 423, 269, 1059, 7657, 1053, 7779, 980, 7900, 19, 7909, 1235, -154, 1271, 6, 423)
 
 [node name="AudioStreamPlayer_squish" type="AudioStreamPlayer" parent="." unique_id=28547953]
@@ -150,3 +160,11 @@ bus = &"SoundFXBuss"
 
 [node name="AudioStreamPlayer_splut2" type="AudioStreamPlayer" parent="." unique_id=1221365515]
 stream = ExtResource("7_ca72b")
+
+[node name="Control" parent="." unique_id=236853619 instance=ExtResource("9_e4814")]
+z_index = 3895
+offset_left = 7460.0
+offset_top = 477.0
+offset_right = 7460.0
+offset_bottom = 477.0
+scale = Vector2(0.2, 0.2)
