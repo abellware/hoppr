@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://ciywfnewfeeu3"]
+
+[ext_resource type="Script" uid="uid://camsjcqp42631" path="res://backto1.gd" id="1_is6kj"]
+[ext_resource type="Texture2D" uid="uid://cqoi608cp0x64" path="res://assets/images/1.png" id="2_o4mg6"]
+[ext_resource type="Script" uid="uid://u8bm3q2u2j5u" path="res://button1scaler.gd" id="3_17b3g"]
+
+[node name="Control" type="Control" unique_id=981061940]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_is6kj")
+
+[node name="Button" type="Button" parent="." unique_id=150422746]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -36.0
+offset_right = 41.5
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "1"
+icon = ExtResource("2_o4mg6")
+script = ExtResource("3_17b3g")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
